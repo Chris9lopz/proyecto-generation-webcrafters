@@ -23,3 +23,8 @@ body {
 .nav-link:hover {
     color: #F2E6CF;
 }
+
+.fs-sm-icon {
+    font-size: 0.8rem;
+    text-align: center;
+}
