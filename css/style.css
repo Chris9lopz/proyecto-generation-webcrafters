@@ -2,3 +2,24 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }
+
+.navbar {
+    background-color: #16153D;
+    color: white;    
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: #F2E6CF;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #F2E6CF;
+}
