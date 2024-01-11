@@ -1,0 +1,120 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.navbar {
+    background-color: #16153D;
+    color: white;    
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: #F2E6CF;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #F2E6CF;
+}
+
+.fs-sm-icon {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/*********************Conoce a nuestro equipo**************************/
+
+.tlt-equipo{
+    text-align: center;
+    margin: 50px auto;
+    font-size: 30px;
+    font-weight: bold;;
+ }
+ .card-title{
+    font-weight: bold;
+}
+.cards-equipo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    margin: 30px auto;
+   
+}
+.card-equipo-img{
+    margin: 30px;
+    border: none !important;
+    
+}
+
+.card-body{
+    color: black !important;
+    text-align: center;
+}
+
+.card-img{
+    height: 100%;
+}
+.card-img-overlay{
+    opacity: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+}
+
+
+.card-img-overlay h5{
+    font-size: 25px;
+    margin-top: 50%;
+}
+
+.card-img-overlay:hover{
+    opacity: 1;
+    
+    
+}
+
+
+@media (max-width: 700px) {
+    
+    .cards-equipo{
+       
+        flex-wrap: wrap;
+        width: 50%;
+    }
+    .cards-equipo > div {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .card-equipo-img{
+        margin: 0;
+        
+    }
+    
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+    
+    .cards-equipo{
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .cards-equipo > div {
+        width: 50%;
+        padding:20px;
+        border: none;
+    }
+    .card-equipo-img{  
+        margin: 0;
+    }
+    
+}
+
+/**********************end conoce a nuestro equipo*************************/
