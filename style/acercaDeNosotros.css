@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+.nuestra-historia {
+    background-color: #9cd2d3;
+    flex: 1; 
+}
+
+.nuestra-historia-titulo {
+    text-align: left;
+    padding: 40px 20px;
+    font-weight: bold;
+}
+
+.nuestra-historia-imagen-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.nuestra-historia-imagen {
+    width: 50%;
+}
+
+.nuestra-historia-info-contenedor {
+    align-items: center;
+}
+
+.nuestra-historia-info {
+    text-align: justify;
+    padding: 0px 40px 0px 40px;
+}
+
+
+
+footer{
+    bottom: 0;
+    width: 100%;
+}
+
+.brand-container{
+    width: 100%;
+    text-align: center;
+    background-color: #4a6eb0;
+}
+
+.footer-iconos{
+    background-color: #16153D;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-info-contenedor{
+    background-color: #4a6eb0;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 8px;
+}
+
+.footer-info{
+    margin-bottom: 0 !important;
+    padding-top: 8px;
+}
+
+
+@media (max-width: 600px) {
+    /*Estilos adicionales*/
+    .footer-info-contenedor{
+        display: block;
+        
+    }
+    .footer-info-contenedor p {
+        align-items: center !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .nuestra-historia-contenedor {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nuestra-historia-imagen-contenedor {
+        order: 2;
+        padding-right: 40px;
+        padding-bottom: 50px;
+    }
+
+    .nuestra-historia-imagen {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .nuestra-historia-titulo {
+        padding: 40px 80px;
+    }
+
+    .nuestra-historia-info {
+        text-align: justify;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .nuestra-historia-imagen-contenedor {
+        padding-left: 30px;
+        padding-right: 100px;
+        padding-bottom: 50px;
+    }
+    .footer-info-contenedor{
+        padding-left: 350px;
+        padding-right: 350px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nuestra-historia-imagen {
+        width: 80%;
+    }
+
+    .nuestra-historia-info {
+        padding-top: 50px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .nuestra-historia-imagen {
+        width: 60%;
+    }
+
+    .nuestra-historia-info {
+        padding-top: 100px;
+    }
+}
