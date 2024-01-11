@@ -1,3 +1,4 @@
+/*INICIO CSS RAMA CHRIS*/
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
@@ -28,3 +29,112 @@ body {
     font-size: 0.8rem;
     text-align: center;
 }
+
+/*FIN CSS RAMA CHRIS*/
+
+/*INICIO CSS RAMA LAU*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+/* -----LENGUAJES IMPLEMENTADOS----- */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
+.lenguajes__container {
+  padding-block: 3rem;
+}
+
+.lenguajesImplementados{
+  text-align: center;
+  margin: 5%;
+  padding: 5%;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+.lenguajesImplementados h2{
+  margin: 2%;
+  font-size: 30px;
+}
+.lenguajesImplementados p{
+  margin: 2%;
+  flex-direction: column;
+  font-size: 25px;
+}
+.lenguajes__content {
+  margin-inline: 1.75rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+/* Swiper class para los botones y para que se mueva dando click y arrastrando encima */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: initial;
+  height: initial;
+  font-size: 3rem;
+  color: var(--second-color);
+  display: none;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+/*Puntitos para moverse en el carrusel*/
+.swiper-pagination-bullet {
+  background-color: hsl(212, 32%, 40%);
+  opacity: 1;
+}
+
+
+/* DISEÑO RESPONSIVE LENGUAJES */
+
+/* iPhone */
+@media screen and (max-width: 320px) {
+  .lenguajes__data {
+    padding: 1rem;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .lenguajes__content {
+    margin-inline: 3rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+}
+
+/* Computador */
+@media screen and (min-width: 1120px) {
+  .lenguajes__container {
+    max-width: 1120px;
+  }
+
+  .swiper-button-prev {
+    left: -1rem;
+  }
+  .swiper-button-next {
+    right: -1rem;
+  }
+}
+/* FIN LENGUAJES IMPLEMENTADOS */
+
+
+/* FIN CSS RAMA LAU*/
