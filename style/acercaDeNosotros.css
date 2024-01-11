@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto&display=swap');
-
+/* resetear estilos globales */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +12,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-
+/* estilos nuestra historia */
 .nuestra-historia {
     background-color: #9cd2d3;
     flex: 1; 
@@ -44,7 +44,7 @@ body{
     padding: 0px 40px 0px 40px;
 }
 
-
+/* estilos pie de pagina */
 
 footer{
     bottom: 0;
@@ -75,9 +75,8 @@ footer{
     padding-top: 8px;
 }
 
-
+/* media queries */
 @media (max-width: 600px) {
-    /*Estilos adicionales*/
     .footer-info-contenedor{
         display: block;
         
