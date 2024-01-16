@@ -41,6 +41,9 @@
 .elemento {
     width: 100%;
     background-color: #4a6eb0;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contacto {
@@ -72,8 +75,9 @@
     border-radius: 5px;
     outline: none;
     padding: 10px;
-    color: #fff;
+    color: #000;
     font-size: 16px;
+    min-width: 200px;
 }
 
 .caja-entrada label{
@@ -104,6 +108,7 @@ textarea.entrada{
     cursor: pointer;
     font-weight: bold;
     margin-bottom: 50px;
+    min-width: 100px;
 }
 
 /*
@@ -219,6 +224,7 @@ footer {
     padding-bottom: 8px;
 }
 
+
 .footer-info {
     margin-bottom: 0 !important;
     padding-top: 8px;
@@ -249,18 +255,21 @@ footer {
         color: #fff;
         padding-left: 20px;
         padding-top: 20px;
-        font-size: 25px;
+        font-size: 22px;
         font-weight: bolder;
     }
     
     .imagen-contacto {
         height: 320px;
         width: 320px;
+        border-radius: 25px;
     }
 
     .boton{
         height: 45px;
         width: 30%;
+        max-width: 150px;
+        min-width: 150px;
     }
 
 }
