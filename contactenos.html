@@ -158,49 +158,55 @@
         </div>
         <div class="form col-lg-7">
           <h4 class="contactanos">Contáctanos</h4>
-          <form action="" class="formulario">
+          <form action="https://formsubmit.co/laurabaron.dev@gmail.com" method="POST" class="formulario">
             <div class="caja-entrada">
-              <label for="">Nombre</label>
+              <label for="name">Nombre</label>
               <br />
               <input
                 type="text"
                 class="entrada"
+                name="name" 
+                id="name"
                 placeholder="Ingresa tu nombre"
               />
             </div>
             <div class="caja-entrada">
-              <label for="">Correo</label>
+              <label for="email">Correo</label>
               <br />
               <input
                 type="email"
                 class="entrada"
+                name="email" 
+                id="email"
                 placeholder="Ingresa tu correo electrónico"
                 required
               />
             </div>
             <div class="caja-entrada">
-              <label for="">Celular</label>
+              <label for="celular">Celular</label>
               <br />
               <input
                 type="text"
-                class="entrada"
+                class="entrada"                
+                name="celular" 
+                id="celular"
                 placeholder="Ingrese tu celular"
                 required
               />
-            </div>
+            </div>            
             <div class="caja-entrada">
-              <label for="">Cuentanos sobre tu proyecto</label>
+              <label for="mensaje">Cuentanos sobre tu proyecto</label>
               <textarea
-                name=""
+                name="mensaje"
                 id="mensaje"
                 cols="30"
                 rows="10"
                 class="entrada"
                 placeholder="Ingresa alguna pregunta, comentario u opinión"
-                required
-              ></textarea>
+                required>
+              </textarea>
             </div>
-            <input type="submit" class="boton" value="Enviar" />
+            <input type="submit" class="boton" value="Enviar"/>
           </form>
         </div>
       </div>
