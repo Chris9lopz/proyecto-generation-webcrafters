@@ -34,27 +34,39 @@
 
 /* estilos formulario de contacto */
 
-.contenedor-formulario {
-    margin: 10px 0px;
-}
+
 
 .elemento {
-    width: 100%;
+    width: 35%;
     background-color: #4a6eb0;
     border-radius: 10px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 0;
+    position: absolute;
+    top: 8%;
+    left: 0;
+    right: 80px;
+    max-width: 400px;
+    min-width: 400px;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .7);
+    
 }
 
 .contacto {
     display: none;
 }
 
+.banner-contacto {
+    background-image: url("../img/contactenos/banner.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
 .contactanos {
     color: #fff;
     padding: 40px 0px 10px 25px;
     font-weight: bold;
-    font-size: xx-large;
 }
 
 .formulario {
@@ -244,6 +256,19 @@ footer {
         justify-content: center !important;
     }
 
+   
+
+}
+
+@media (max-width:860px) {
+
+    .elemento {
+        position: static !important;
+        margin: 0 auto;
+        max-width: none;
+        min-width: none;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -271,6 +296,9 @@ footer {
         max-width: 150px;
         min-width: 150px;
     }
+
+    
+
 
 }
 
