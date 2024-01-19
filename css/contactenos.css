@@ -190,6 +190,10 @@ footer {
         min-width: none;
     }
 
+    .contacto-info{
+        text-align: center;
+    }
+
 }
 
 @media (min-width: 768px) {
@@ -225,7 +229,7 @@ footer {
 
 @media (min-width: 861px) {
     .contacto-info {
-        width: 80%;
+        width: 50%;
     }
 
     .contenedor-total {
@@ -246,6 +250,9 @@ footer {
 }
 
 @media (min-width: 1200px) {
+    .contacto-info {
+        width: 40%;
+    }
     .elemento{
         max-width: 600px;
         min-width: 600px;
