@@ -1,3 +1,9 @@
+:root {
+    --primary: #9cd2d3;  /* Cambia el color principal (azul por defecto) */
+    --secondary: #2ecc71;  /* Cambia el color secundario (verde por defecto) */
+    /* ... Puedes sobrescribir otras variables según tus necesidades */
+  }
+
 /*Estilos Navbar*/
 * {
     margin: 0;
@@ -34,10 +40,14 @@
 
 /* estilos formulario de contacto */
 
-
+.contacto-info{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 50px;
+}
 
 .elemento {
-    width: 35%;
+    width: 90%;
     background-color: #4a6eb0;
     border-radius: 10px;
     margin-left: auto;
@@ -46,10 +56,8 @@
     top: 8%;
     left: 0;
     right: 80px;
-    max-width: 400px;
-    min-width: 400px;
     box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .7);
-    
+
 }
 
 .contacto {
@@ -60,7 +68,7 @@
     background-image: url("../img/contactenos/banner.png");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
 
 .contactanos {
@@ -92,13 +100,13 @@
     min-width: 200px;
 }
 
-.caja-entrada label{
+.caja-entrada label {
     color: #fff;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-textarea.entrada{
+textarea.entrada {
     resize: none;
     min-height: 150px;
     overflow: auto;
@@ -109,7 +117,7 @@ textarea.entrada{
     background-color: #16153D;
 }
 
-.boton{
+.boton {
     background: #fff;
     outline: none;
     border-radius: 10px;
@@ -256,7 +264,7 @@ footer {
         justify-content: center !important;
     }
 
-   
+
 
 }
 
@@ -283,23 +291,38 @@ footer {
         font-size: 22px;
         font-weight: bolder;
     }
-    
+
     .imagen-contacto {
         height: 320px;
         width: 320px;
         border-radius: 25px;
     }
 
-    .boton{
+    .boton {
         height: 45px;
         width: 30%;
         max-width: 150px;
         min-width: 150px;
     }
 
-    
+    .contenedor{
+        position: relative;
+    }
+}
 
+@media (min-width: 861px) {
+    .contacto-info {
+        width: 80%;
+    }
 
+    .contenedor-total {
+        height: 1000px;
+    }
+
+    .elemento {
+        max-width: 400px;
+        min-width: 400px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -310,11 +333,15 @@ footer {
 }
 
 @media (min-width: 1200px) {
-    /*espacio*/
-
-
+    .elemento{
+        max-width: 600px;
+        min-width: 600px;
+    }
 }
 
 @media (min-width: 1440px) {
-    /*espacio*/
+    .elemento{
+        max-width: 700px;
+        min-width: 700px;
+    }
 }
