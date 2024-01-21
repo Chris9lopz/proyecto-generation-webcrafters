@@ -106,28 +106,18 @@
     font-weight: bold;
 }
 /***paola****/
-.caja-entrada input{
-    border:  2px solid black;
-}
-
-.caja-entrada input:focus{
-
-outline: 0;
-}
-
-
-.caja-entrada.success input{
-    border-color: green;
-}
-.caja-entrada.error input{
-    border-color: red;
-}
-.caja-entrada .error{
+.error{
+    visibility: visible;
+    font-size: 12px;
     color: red;
-    font-size: 9px;
-    height: 13px;
-
+    margin: 0;
+    padding: 0;
 }
+
+
+
+
+
 
 /***end paola***/
 textarea.entrada {
