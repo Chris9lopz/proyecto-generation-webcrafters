@@ -2,7 +2,7 @@
 const expresionNombre = /^[a-zA-ZÀ-ÿ\s]+$/;
 const expNombre = /^[a-zA-ZÀ-ÿ\s]{1,40}$/;
 const expresionCorreo = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-const expresionTelefono =/^\d{3}-\d{3}-\d{4}$/;
+const expresionTelefono =/^[\d\s]+$/;
 //const expresionMovil = /^(?:(?:\+|00)34?|0)?[6789]\d{8}$/;
 
 
@@ -74,7 +74,7 @@ const expresionTelefono =/^\d{3}-\d{3}-\d{4}$/;
     
     }
     else if(!validarCorreo(correo)){
-        
+        correoError.classList.add( 'error');
         correoError.innerText =  `incluye un signo "@" en la direccion de correo. La direcion de correo:" ${correo}" no es un correo. ` ;
         
     }else{
@@ -85,18 +85,18 @@ const expresionTelefono =/^\d{3}-\d{3}-\d{4}$/;
 
     //validar telefono
     let telefonoValido = false;
+    
+    
     if(telefono == "" || telefono == 0){
         
          telefonoError.classList.add('error');
          telefonoError.innerText = 'Por favor, ingresa tu numero telefono.';
          document.getElementById("celular").style.border = " 1px solid red";
-         
-      
-    
-        
-    }else if(!validarTelefono(telefono) &&  telefono <= 5){
-        
+             
+    }else if(!validarTelefono(telefono)){
+        telefonoError.classList.add('error');
         telefonoError.innerText = 'Tiene que ser solamente numeros y tiene que tener mas de 5 numeros';
+        document.getElementById("celular").style.border = " 1px solid red";
         
     }else{
         document.getElementById("celular").style.border = " none";
