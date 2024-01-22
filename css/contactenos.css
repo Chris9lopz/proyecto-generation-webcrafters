@@ -105,7 +105,21 @@
     margin-bottom: 20px;
     font-weight: bold;
 }
+/***paola****/
+.error{
+    visibility: visible;
+    font-size: 12px;
+    color: #630b19;
+    margin: 0;
+    padding: 0;
+}
 
+
+
+
+
+
+/***end paola***/
 textarea.entrada {
     resize: none;
     min-height: 150px;
@@ -163,6 +177,9 @@ footer {
     padding-top: 8px;
     color: white;
 }
+
+
+ 
 
 /* media queries */
 @media (max-width: 600px) {
@@ -227,13 +244,17 @@ footer {
     }
 }
 
+
+
+
+
 @media (min-width: 861px) {
     .contacto-info {
         width: 50%;
     }
 
     .contenedor-total {
-        height: 1000px;
+        height: 1100px;
     }
 
     .elemento {
@@ -265,3 +286,4 @@ footer {
         min-width: 700px;
     }
 }
+
