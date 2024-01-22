@@ -86,6 +86,46 @@
 
 /* FIN CSS RAMA LAU*/
 
+/* estilos nuestra historia */
+.nuestra-historia {
+    background-color: #9cd2d3;
+    flex: 1;
+}
+
+.nuestra-historia-titulo {
+    text-align: left;
+    margin-left: 7%;
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+.nuestra-historia-imagen-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.nuestra-historia-imagen {
+    width: 50%;
+}
+
+.nuestra-historia-info-contenedor {
+    align-items: center;
+}
+
+.nuestra-historia-info {
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.nuestra-historia-contenedor {
+
+    align-items: center;
+    justify-content: center;
+}
+
 /*INICIO CSS RAMA PAO*/
 
 /*********************Conoce a nuestro equipo**************************/
@@ -139,6 +179,12 @@
   opacity: 1;
 }
 
+@media (max-width: 600px) {
+    .main-container {
+        min-height: 40vh;
+    }
+}
+
 @media (max-width: 700px) {
 
   .cards-equipo {
@@ -172,6 +218,60 @@
     margin: 0;
   }
 
+}
+
+@media (min-width: 768px) {
+    .nuestra-historia-contenedor {
+        display: flex;
+    }
+
+    .nuestra-historia-imagen-contenedor {
+        order: 2;
+        padding-right: 40px;
+    }
+
+    .nuestra-historia-imagen {
+        width: 100%;
+    }
+
+    .main-container {
+        min-height: 40vh;
+    }
+
+
+}
+
+@media(max-width:768px) {
+    .nuestra-historia-titulo {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nuestra-historia-imagen-contenedor {
+        padding-left: 30px;
+        padding-right: 100px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nuestra-historia-imagen {
+        width: 80%;
+    }
+
+
+}
+
+@media (min-width: 1440px) {
+    .nuestra-historia-imagen {
+        width: 60%;
+    }
+
+    .main-container {
+        min-height: 65vh;
+    }
 }
 
 /**********************end conoce a nuestro equipo*************************/

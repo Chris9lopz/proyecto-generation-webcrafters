@@ -1,9 +1,19 @@
 /*INICIO CSS RAMA CHRIS*/
+* {
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .navbar {
     background-color: #16153D;
@@ -29,60 +39,6 @@ body {
 .fs-sm-icon {
     font-size: 15px;
     text-align: center;
-}
-
-/*FIN CSS RAMA CHRIS*/
-
-
-/*INCIO CSS RAMA LIZ*/
-
-/* resetear estilos globales */
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* estilos nuestra historia */
-.nuestra-historia {
-    background-color: #9cd2d3;
-    flex: 1;
-}
-
-.nuestra-historia-titulo {
-    text-align: left;
-    margin-left: 7%;
-    margin-top: 3%;
-    font-weight: bold;
-}
-
-.nuestra-historia-imagen-contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
-}
-
-.nuestra-historia-imagen {
-    width: 50%;
-}
-
-.nuestra-historia-info-contenedor {
-    align-items: center;
-}
-
-.nuestra-historia-info {
-    text-align: justify;
-    margin-left: 10%;
-    margin-right: 10%;
 }
 
 /* estilos pie de pagina */
@@ -130,53 +86,9 @@ footer {
         justify-content: center !important;
     }
 
-    .main-container {
-        min-height: 40vh;
-    }
-
 }
-
-.nuestra-historia-contenedor {
-
-    align-items: center;
-    justify-content: center;
-}
-
-@media (min-width: 768px) {
-    .nuestra-historia-contenedor {
-        display: flex;
-    }
-
-    .nuestra-historia-imagen-contenedor {
-        order: 2;
-        padding-right: 40px;
-    }
-
-    .nuestra-historia-imagen {
-        width: 100%;
-    }
-
-    .main-container {
-        min-height: 40vh;
-    }
-
-
-}
-
-@media(max-width:768px) {
-    .nuestra-historia-titulo {
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-}
-
 
 @media (min-width: 1024px) {
-    .nuestra-historia-imagen-contenedor {
-        padding-left: 30px;
-        padding-right: 100px;
-        padding-bottom: 50px;
-    }
 
     .footer-info-contenedor {
         padding-left: 350px;
@@ -184,22 +96,4 @@ footer {
     }
 }
 
-@media (min-width: 1200px) {
-    .nuestra-historia-imagen {
-        width: 80%;
-    }
-
-
-}
-
-@media (min-width: 1440px) {
-    .nuestra-historia-imagen {
-        width: 60%;
-    }
-
-    .main-container {
-        min-height: 65vh;
-    }
-}
-
-/*FIN CSS RAMA LIZ*/
+/*FIN CSS FOOTER*/

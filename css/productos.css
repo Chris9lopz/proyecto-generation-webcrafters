@@ -1,36 +1,4 @@
-/*Estilos Navbar*/
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-}
-
-.navbar {
-    background-color: #16153D;
-    color: white;
-}
-
-.navbar-brand {
-    color: white;
-}
-
-.navbar-brand:hover {
-    color: #F2E6CF;
-}
-
-.nav-link {
-    color: white;
-}
-
-.nav-link:hover {
-    color: #F2E6CF;
-}
-
-.fs-sm-icon {
-    font-size: 15px;
-    text-align: center;
-}
+@import url('styles.css');
 
 /*estilos banner*/
 
@@ -74,52 +42,9 @@
     font-weight: 600;
 }
 
-/* estilos pie de pagina */
-
-footer {
-    bottom: 0;
-    width: 100%;
-    background-color: #4a6eb0;
-
-}
-
-.brand-container {
-    width: 100%;
-    text-align: center;
-}
-
-.footer-iconos {
-    background-color: #16153D;
-    display: flex;
-    justify-content: center;
-}
-
-.footer-info-contenedor {
-    background-color: #4a6eb0;
-    display: flex;
-    justify-content: space-around;
-}
-
-
-.footer-info {
-    margin-bottom: 0;
-    padding-top: 8px;
-    color: white;
-}
-
 /* media queries */
 @media (max-width: 600px) {
-    .footer-info-contenedor {
-        display: block;
-
-    }
-
-    .footer-info-contenedor p {
-        align-items: center !important;
-        text-align: center !important;
-        justify-content: center !important;
-    }
-
+   
     .col {
         flex: 100%;
         max-width: 100%;
@@ -145,13 +70,6 @@ footer {
 
 @media (min-width: 861px) {
     /*estilos*/
-}
-
-@media (min-width: 1024px) {
-    .footer-info-contenedor {
-        padding-left: 350px;
-        padding-right: 350px;
-    }
 }
 
 @media (min-width: 1200px) {
