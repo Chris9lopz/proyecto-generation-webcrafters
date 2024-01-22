@@ -77,7 +77,7 @@ function validarTelefono() {
     return false;
   } else if (!expresionTelefono.test(telefonoAValidar)) {
     telefonoError.classList.add('error');
-    telefonoError.innerText = 'Tiene que ser solamente numeros y tiene que tener mas de 5 numeros';
+    telefonoError.innerText = 'Tiene que ser solamente numeros y tiene que tener mas de 10 numeros';
     document.getElementById("celular").style.border = " 1px solid #951018";
     return false;
   } else {
