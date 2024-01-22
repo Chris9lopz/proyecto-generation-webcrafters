@@ -30,12 +30,12 @@ const validarNombre = () => {
     if (nombreAValidar == "" || nombreAValidar == 0) {
         nombreError.classList.add('error');
         nombreError.innerText = 'Por favor, ingresa tu nombre.';
-        document.getElementById("name").style.border = '1px solid #951018';
+        document.getElementById("name").style.border = '2px solid #951018';
         return false;
     } else if (!expresionNombre.test(nombreAValidar)) {
         nombreError.classList.add('error');
         nombreError.innerText = 'Tiene que ser solamente texto con minusculas o mayusculas';
-        document.getElementById("name").style.border = '1px solid #951018';
+        document.getElementById("name").style.border = '2px solid #951018';
         return false;
     } else {
         document.getElementById("name").style.border = 'none';
@@ -51,12 +51,12 @@ const validarCorreo = () => {
     if (correoAValidar == "" || correoAValidar == 0) {
         correoError.classList.add('error');
         correoError.innerText = 'Por favor, ingresa tu número correo.';
-        document.getElementById("email").style.border = " 1px solid #951018";
+        document.getElementById("email").style.border = " 2px solid #951018";
         return false;
     } else if (!expresionCorreo.test(correoAValidar)) {
         correoError.classList.add('error');
         correoError.innerText = `incluye un signo "@" en la direccion de correo. La direcion de correo:" ${correo}" no es un correo. `;
-        document.getElementById("email").style.border = " 1px solid #951018";
+        document.getElementById("email").style.border = " 2px solid #951018";
         return false;
     } else {
         document.getElementById("email").style.border = "none";
@@ -73,12 +73,12 @@ const validarTelefono = () => {
     if (telefonoAValidar == "" || telefonoAValidar == 0) {
         telefonoError.classList.add('error');
         telefonoError.innerText = 'Por favor, ingresa tu numero telefono.';
-        document.getElementById("celular").style.border = " 1px solid #951018";
+        document.getElementById("celular").style.border = " 2px solid #951018";
         return false;
     } else if (!expresionTelefono.test(telefonoAValidar)) {
         telefonoError.classList.add('error');
         telefonoError.innerText = 'Tiene que ser solamente numeros y tiene que tener mas de 10 numeros';
-        document.getElementById("celular").style.border = " 1px solid #951018";
+        document.getElementById("celular").style.border = " 2px solid #951018";
         return false;
     } else {
         document.getElementById("celular").style.border = " none";
@@ -93,7 +93,7 @@ const validarMensaje = () => {
     if (textoAValidar == "" || textoAValidar == 0) {
         mensajeError.classList.add('error');
         mensajeError.innerText = 'Por favor, ingresa un comentario.';
-        document.getElementById("mensaje").style.border = '1px solid #951018';
+        document.getElementById("mensaje").style.border = '2px solid #951018';
         return false;
     }
     else {

@@ -109,7 +109,8 @@
 /***paola****/
 .error{
     visibility: visible;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: bold;
     color: #630b19;
     margin: 0;
     padding: 0;
