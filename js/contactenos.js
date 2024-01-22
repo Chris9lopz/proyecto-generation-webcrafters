@@ -55,7 +55,7 @@ const validarCorreo = () => {
         return false;
     } else if (!expresionCorreo.test(correoAValidar)) {
         correoError.classList.add('error');
-        correoError.innerText = `incluye un signo "@" en la direccion de correo. La direcion de correo:" ${correo}" no es un correo. `;
+        correoError.innerText = `incluye un signo "@" en la direccion de correo. La direcion de correo:" ${correo.value}" no es un correo. `;
         document.getElementById("email").style.border = " 2px solid #951018";
         return false;
     } else {
