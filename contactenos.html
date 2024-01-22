@@ -130,32 +130,58 @@
       <div class="elemento row mt-5">
         <div class="form col-lg-12 contenedor-formulario">
           <h4 class="contactanos">Contáctanos</h4>
-          <form  class="formulario" id="miFormulario">
+          <form action="https://formsubmit.co/paolarodriguezcastro10@gmail.com" method="POST" class="formulario" id="miFormulario" >
             <div class="caja-entrada">
-              <label for="nombre">Nombre Completo</label>
+              <label for="name">Nombre</label>
               <br />
-              <input type="text" name="name" id="nombre" class="entrada" placeholder="Ingresa tu nombre completo"  />
+              <input
+                type="text"
+                class="entrada"
+                name="name" 
+                id="name"
+                placeholder="Ingresa tu nombre"
+              />
               <div id="nameWarning"></div>
             </div>
             <div class="caja-entrada">
-              <label for="correo">Correo</label>
+              <label for="email">Correo</label>
               <br />
-              <input type="text" name="email" id="correo" class="entrada" placeholder="Ingresa tu correo electrónico"  />
+              <input
+                type="email"
+                class="entrada"
+                name="email" 
+                id="email"
+                placeholder="Ingresa tu correo electrónico"
+               
+              />
               <div id="emailWarning"></div>
             </div>
             <div class="caja-entrada">
               <label for="celular">Celular</label>
               <br />
-              <input type="text" id="celular" name="celular" class="entrada" placeholder="Ingrese tu celular"  />
+              <input
+                type="text"
+                class="entrada"                
+                name="celular" 
+                id="celular"
+                placeholder="Ingrese tu celular"
+                
+                
+              />
               <div id="phoneWarning"></div>
-            </div>
+            </div>            
             <div class="caja-entrada">
               <label for="mensaje">Cuentanos sobre tu proyecto</label>
-              <textarea id="mensaje" cols="30" rows="10" class="entrada" placeholder="Ingresa alguna pregunta, comentario u opinión" ></textarea>
+              <textarea name="mensaje"
+              id="mensaje"
+              cols="30"
+              rows="10"
+              class="entrada"
+              placeholder="Ingresa alguna pregunta, comentario u opinión"
+               ></textarea>
               <div id="messageWarning"></div>
             </div>
-            <input type="submit" class="boton" value="Enviar" />
-            
+            <input type="submit" class="boton" value="Enviar"/>
           </form>
         </div>
       </div>

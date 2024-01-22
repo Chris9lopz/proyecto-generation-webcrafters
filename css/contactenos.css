@@ -109,7 +109,7 @@
 .error{
     visibility: visible;
     font-size: 12px;
-    color: red;
+    color: #630b19;
     margin: 0;
     padding: 0;
 }
@@ -254,7 +254,7 @@ footer {
     }
 
     .contenedor-total {
-        height: 1000px;
+        height: 1100px;
     }
 
     .elemento {
