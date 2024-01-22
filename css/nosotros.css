@@ -1,0 +1,179 @@
+@import url('styles.css');
+
+/*INICIO CSS RAMA LAU*/
+
+.lenguajesImplementados h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.lenguajesImplementados p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.main-container {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  margin: 50px 50px;
+}
+
+.slicer {
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 14);
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+.img-slide {
+  width: 100%;
+  transition: transform 1s;
+}
+
+.img-slide:hover {
+  transform: translateZ(10px);
+}
+
+.slicer::before,
+.slicer::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.slicer::before {
+  left: 0;
+  top: 0;
+}
+
+.slicer::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+/* FIN CSS RAMA LAU*/
+
+/*INICIO CSS RAMA PAO*/
+
+/*********************Conoce a nuestro equipo**************************/
+
+.tlt-equipo {
+  text-align: center;
+  margin: 50px auto;
+  font-size: 30px;
+  font-weight: bold;
+  ;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.cards-equipo {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  padding: 10px;
+  margin: 30px auto;
+}
+
+.card-equipo-img {
+  margin: 30px;
+  border: none !important;
+}
+
+.card-body {
+  color: black !important;
+  text-align: center;
+}
+
+.card-img {
+  height: 100%;
+}
+
+.card-img-overlay {
+  opacity: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.card-img-overlay h5 {
+  font-size: 25px;
+  margin-top: 50%;
+}
+
+.card-img-overlay:hover {
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+
+  .cards-equipo {
+    flex-wrap: wrap;
+    width: 50%;
+  }
+
+  .cards-equipo>div {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .card-equipo-img {
+    margin: 0;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+  .cards-equipo {
+    flex-wrap: wrap;
+    width: 80%;
+  }
+
+  .cards-equipo>div {
+    width: 50%;
+    padding: 20px;
+    border: none;
+  }
+
+  .card-equipo-img {
+    margin: 0;
+  }
+
+}
+
+/**********************end conoce a nuestro equipo*************************/
+
+/*FIN CSS RAMA PAO*/
