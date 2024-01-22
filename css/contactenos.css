@@ -105,7 +105,21 @@
     margin-bottom: 20px;
     font-weight: bold;
 }
+/***paola****/
+.error{
+    visibility: visible;
+    font-size: 12px;
+    color: #630b19;
+    margin: 0;
+    padding: 0;
+}
 
+
+
+
+
+
+/***end paola***/
 textarea.entrada {
     resize: none;
     min-height: 150px;
@@ -164,6 +178,9 @@ footer {
     color: white;
 }
 
+
+ 
+
 /* media queries */
 @media (max-width: 600px) {
     .footer-info-contenedor {
@@ -188,6 +205,10 @@ footer {
         margin: 0 auto;
         max-width: none;
         min-width: none;
+    }
+
+    .contacto-info{
+        text-align: center;
     }
 
 }
@@ -223,13 +244,17 @@ footer {
     }
 }
 
+
+
+
+
 @media (min-width: 861px) {
     .contacto-info {
-        width: 80%;
+        width: 50%;
     }
 
     .contenedor-total {
-        height: 1000px;
+        height: 1100px;
     }
 
     .elemento {
@@ -246,6 +271,9 @@ footer {
 }
 
 @media (min-width: 1200px) {
+    .contacto-info {
+        width: 40%;
+    }
     .elemento{
         max-width: 600px;
         min-width: 600px;
@@ -258,3 +286,4 @@ footer {
         min-width: 700px;
     }
 }
+
