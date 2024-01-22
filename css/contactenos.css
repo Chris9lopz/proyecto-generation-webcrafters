@@ -1,8 +1,11 @@
 :root {
-    --primary: #9cd2d3;  /* Cambia el color principal (azul por defecto) */
-    --secondary: #2ecc71;  /* Cambia el color secundario (verde por defecto) */
+    --primary: #9cd2d3;
+    /* Cambia el color principal (azul por defecto) */
+    --secondary: #2ecc71;
+    /* Cambia el color secundario (verde por defecto) */
     /* ... Puedes sobrescribir otras variables según tus necesidades */
-  }
+}
+
 
 /*Estilos Navbar*/
 * {
@@ -10,6 +13,14 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
@@ -41,7 +52,7 @@
 
 /* estilos formulario de contacto */
 
-.contacto-info{
+.contacto-info {
     width: 100%;
     padding-left: 10px;
     padding-right: 50px;
@@ -106,8 +117,9 @@
     margin-bottom: 20px;
     font-weight: bold;
 }
+
 /***paola****/
-.error{
+.error {
     visibility: visible;
     font-size: 14px;
     font-weight: bold;
@@ -181,7 +193,7 @@ footer {
 }
 
 
- 
+
 
 /* media queries */
 @media (max-width: 600px) {
@@ -209,7 +221,7 @@ footer {
         min-width: none;
     }
 
-    .contacto-info{
+    .contacto-info {
         text-align: center;
     }
 
@@ -247,7 +259,7 @@ footer {
         min-width: 150px;
     }
 
-    .contenedor{
+    .contenedor {
         position: relative;
     }
 }
@@ -282,16 +294,16 @@ footer {
     .contacto-info {
         width: 40%;
     }
-    .elemento{
+
+    .elemento {
         max-width: 600px;
         min-width: 600px;
     }
 }
 
 @media (min-width: 1440px) {
-    .elemento{
+    .elemento {
         max-width: 700px;
         min-width: 700px;
     }
 }
-
