@@ -1,40 +1,7 @@
-/*INICIO CSS RAMA CHRIS*/
-body {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-
-}
-
-.navbar {
-  background-color: #16153D;
-  color: white;
-}
-
-.navbar-brand {
-  color: white;
-}
-
-.navbar-brand:hover {
-  color: #F2E6CF;
-}
-
-.nav-link {
-  color: white;
-}
-
-.nav-link:hover {
-  color: #F2E6CF;
-}
-
-.fs-sm-icon {
-  font-size: 15px;
-  text-align: center;
-}
-
-/*FIN CSS RAMA CHRIS*/
+@import url('styles.css');
 
 /*INICIO CSS RAMA LAU*/
-/* -----LENGUAJES IMPLEMENTADOS----- */
+
 .lenguajesImplementados h2 {
   text-align: center;
   margin-bottom: 40px;
@@ -117,179 +84,47 @@ body {
   transform: rotateZ(180deg);
 }
 
-/* FIN LENGUAJES IMPLEMENTADOS */
 /* FIN CSS RAMA LAU*/
-
-/*INCIO CSS RAMA LIZ*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto&display=swap');
-
-/* resetear estilos globales */
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 
 /* estilos nuestra historia */
 .nuestra-historia {
-  background-color: #9cd2d3;
-  flex: 1;
+    background-color: #9cd2d3;
+    flex: 1;
 }
 
 .nuestra-historia-titulo {
-  text-align: left;
-  margin-left: 7%;
-  margin-top: 3%;
-  font-weight: bold;
+    text-align: left;
+    margin-left: 7%;
+    margin-top: 3%;
+    font-weight: bold;
 }
 
 .nuestra-historia-imagen-contenedor {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
 }
 
 .nuestra-historia-imagen {
-  width: 50%;
+    width: 50%;
 }
 
 .nuestra-historia-info-contenedor {
-  align-items: center;
+    align-items: center;
 }
 
 .nuestra-historia-info {
-  text-align: justify;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-/* estilos pie de pagina */
-
-footer {
-  bottom: 0;
-  width: 100%;
-}
-
-.brand-container {
-  width: 100%;
-  text-align: center;
-  background-color: #4a6eb0;
-}
-
-.footer-iconos {
-  background-color: #16153D;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-info-contenedor {
-  background-color: #4a6eb0;
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 8px;
-}
-
-.footer-info {
-  margin-bottom: 0 !important;
-  padding-top: 8px;
-  color: white;
-}
-
-/* media queries */
-@media (max-width: 600px) {
-  .footer-info-contenedor {
-    display: block;
-
-  }
-
-  .footer-info-contenedor p {
-    align-items: center !important;
-    text-align: center !important;
-    justify-content: center !important;
-  }
-
-  .main-container {
-    min-height: 40vh;
-  }
-
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .nuestra-historia-contenedor {
 
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
-
-@media (min-width: 768px) {
-  .nuestra-historia-contenedor {
-    display: flex;
-  }
-
-  .nuestra-historia-imagen-contenedor {
-    order: 2;
-    padding-right: 40px;
-  }
-
-  .nuestra-historia-imagen {
-    width: 100%;
-  }
-
-  .main-container {
-    min-height: 40vh;
-  }
-
-
-}
-
-@media(max-width:768px) {
-  .nuestra-historia-titulo {
-    margin-top: 5%;
-    margin-bottom: 5%;
-  }
-}
-
-
-@media (min-width: 1024px) {
-  .nuestra-historia-imagen-contenedor {
-    padding-left: 30px;
-    padding-right: 100px;
-    padding-bottom: 50px;
-  }
-
-  .footer-info-contenedor {
-    padding-left: 350px;
-    padding-right: 350px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .nuestra-historia-imagen {
-    width: 80%;
-  }
-
-
-}
-
-@media (min-width: 1440px) {
-  .nuestra-historia-imagen {
-    width: 60%;
-  }
-
-  .main-container {
-    min-height: 65vh;
-  }
-}
-
-/*FIN CSS RAMA LIZ*/
 
 /*INICIO CSS RAMA PAO*/
 
@@ -344,6 +179,12 @@ footer {
   opacity: 1;
 }
 
+@media (max-width: 600px) {
+    .main-container {
+        min-height: 40vh;
+    }
+}
+
 @media (max-width: 700px) {
 
   .cards-equipo {
@@ -377,6 +218,60 @@ footer {
     margin: 0;
   }
 
+}
+
+@media (min-width: 768px) {
+    .nuestra-historia-contenedor {
+        display: flex;
+    }
+
+    .nuestra-historia-imagen-contenedor {
+        order: 2;
+        padding-right: 40px;
+    }
+
+    .nuestra-historia-imagen {
+        width: 100%;
+    }
+
+    .main-container {
+        min-height: 40vh;
+    }
+
+
+}
+
+@media(max-width:768px) {
+    .nuestra-historia-titulo {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nuestra-historia-imagen-contenedor {
+        padding-left: 30px;
+        padding-right: 100px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nuestra-historia-imagen {
+        width: 80%;
+    }
+
+
+}
+
+@media (min-width: 1440px) {
+    .nuestra-historia-imagen {
+        width: 60%;
+    }
+
+    .main-container {
+        min-height: 65vh;
+    }
 }
 
 /**********************end conoce a nuestro equipo*************************/

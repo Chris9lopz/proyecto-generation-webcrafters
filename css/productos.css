@@ -1,0 +1,81 @@
+@import url('styles.css');
+
+/*estilos banner*/
+
+.row{
+    width: 100%;
+}
+
+.fondo {
+    background-image: url('../img/productos/bannerProductos.png');
+    height: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+}
+
+.titulo-banner {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.texto-banner {
+    color: white;
+}
+
+.img-banner {
+    max-width: 100%;
+    display: block;
+}
+
+/*estilos posicionamiento seo*/
+
+.seo{
+    background-color: #F2E6CF;
+    margin: 25px;
+}
+
+.titulo-posicionamiento{
+    font-weight: 600;
+}
+
+/* media queries */
+@media (max-width: 600px) {
+   
+    .col {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+}
+
+@media (min-width: 768px) {
+    
+    .col {
+        padding-top: 0;
+    }
+
+    .columna-imagen {
+        order: 2;
+    }
+
+    .texto-posicionamiento{
+        padding:10px 15px;
+        
+    }
+}
+
+@media (min-width: 861px) {
+    /*estilos*/
+}
+
+@media (min-width: 1200px) {
+    /*estilos*/
+}
+
+@media (min-width: 1440px) {
+    /*estilos*/
+}
