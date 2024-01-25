@@ -7,7 +7,7 @@ class Productos {
     }
 
     comprarProducto() {
-        return `{nombre: ${this.nombre} ,precio: ${this.precio}, imagenPlantilla: ${this.imagenPlantilla}, categoria: ${this.categoria}, plan: ${this.plan}}`
+        return `{nombre: ${this.nombre} ,precio: ${this.precio}, imagenPlantilla: ${this.imagenPlantilla}, categoria: ${this.categoria}}`
     }
 }
 
