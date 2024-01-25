@@ -1,3 +1,5 @@
+@import url('styles.css');
+
 :root {
     --primary: #9cd2d3;
     /* Cambia el color principal (azul por defecto) */
@@ -5,50 +7,6 @@
     /* Cambia el color secundario (verde por defecto) */
     /* ... Puedes sobrescribir otras variables según tus necesidades */
 }
-
-
-/*Estilos Navbar*/
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.navbar {
-    background-color: #16153D;
-    color: white;
-}
-
-.navbar-brand {
-    color: white;
-}
-
-.navbar-brand:hover {
-    color: #F2E6CF;
-}
-
-.nav-link {
-    color: white;
-}
-
-.nav-link:hover {
-    color: #F2E6CF;
-}
-
-.fs-sm-icon {
-    font-size: 15px;
-    text-align: center;
-}
-
 
 /* estilos formulario de contacto */
 
@@ -129,10 +87,6 @@ body {
 }
 
 
-
-
-
-
 /***end paola***/
 textarea.entrada {
     resize: none;
@@ -159,42 +113,6 @@ textarea.entrada {
     min-width: 100px;
 }
 
-/* estilos pie de pagina */
-
-footer {
-    bottom: 0;
-    width: 100%;
-}
-
-.brand-container {
-    width: 100%;
-    text-align: center;
-    background-color: #4a6eb0;
-}
-
-.footer-iconos {
-    background-color: #16153D;
-    display: flex;
-    justify-content: center;
-}
-
-.footer-info-contenedor {
-    background-color: #4a6eb0;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 8px;
-}
-
-
-.footer-info {
-    margin-bottom: 0 !important;
-    padding-top: 8px;
-    color: white;
-}
-
-
-
-
 /* media queries */
 @media (max-width: 600px) {
     .footer-info-contenedor {
@@ -206,23 +124,6 @@ footer {
         align-items: center !important;
         text-align: center !important;
         justify-content: center !important;
-    }
-
-
-
-}
-
-@media (max-width:860px) {
-
-    .elemento {
-        position: static !important;
-        margin: 0 auto;
-        max-width: none;
-        min-width: none;
-    }
-
-    .contacto-info {
-        text-align: center;
     }
 
 }
@@ -264,10 +165,6 @@ footer {
     }
 }
 
-
-
-
-
 @media (min-width: 861px) {
     .contacto-info {
         width: 50%;
@@ -280,13 +177,6 @@ footer {
     .elemento {
         max-width: 400px;
         min-width: 400px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .footer-info-contenedor {
-        padding-left: 350px;
-        padding-right: 350px;
     }
 }
 
