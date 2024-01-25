@@ -113,6 +113,11 @@
     .contenedorPqElegirnos .izquierda{
         margin-bottom: 50px;
     }
+
+    .card-mb-price {
+        margin-bottom: 20px;
+    }
+
 }
 
 @media (min-width: 768px) {
