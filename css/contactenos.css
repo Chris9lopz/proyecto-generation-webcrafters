@@ -1,13 +1,5 @@
 @import url('styles.css');
 
-:root {
-    --primary: #9cd2d3;
-    /* Cambia el color principal (azul por defecto) */
-    --secondary: #2ecc71;
-    /* Cambia el color secundario (verde por defecto) */
-    /* ... Puedes sobrescribir otras variables según tus necesidades */
-}
-
 /* estilos formulario de contacto */
 
 .contacto-info {

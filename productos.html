@@ -72,7 +72,8 @@
         <div class="d-flex align-items-center">
           <!-- Icon -->
           <a class="text-reset me-3" href="#">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-shopping-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"></i>
           </a>
 
           <!-- Avatar -->
@@ -100,10 +101,23 @@
       <!-- End Container wrapper -->
     </nav>
     <!-- End Navbar -->
+    
+    <!--Offcanva-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header bg-col text-dark d-flex justify-content-between">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Mi carrito</h5>
+        <span>Items</span>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        
+      </div>
+    </div>
+
   </section>
   <!-- End Navbar -->
 
-    <!-- banner -->
+  <!-- banner -->
 
   <div class="fondo text-center d-flex justify-content-center align-items-center">
     <div class="row align-items-center">
@@ -191,39 +205,39 @@
           <tbody>
             <tr>
               <td>Página web responsiva con cualquier dispositivo</td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
             </tr>
             <tr>
               <td>Posicionamiento SEO</td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
             </tr>
             <tr>
               <td>Servicio de asistencia telefónica, chat y correo</td>
               <td></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
             </tr>
             <tr>
               <td>Servicios de branding</td>
               <td></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
             </tr>
             <tr>
               <td>Animaciones exclusivas</td>
               <td></td>
               <td></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
             </tr>
             <tr>
               <td>Hosting en servicios nube AWS</td>
               <td></td>
               <td></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
             </tr>
           </tbody>
         </table>
@@ -252,32 +266,35 @@
   </div>
   <!-- fin posicionamiento SEO -->
 
-    <!-- Pq Elegirnos -->   
-    <section>
-        <div class="pqElegirnos">
-           
-           <h2>¿Por qué elegirnos?</h2>
-           <p>En webminds, no simplemente creamos sitios web; damos vida a experiencias digitales únicas. Desde la vanguardia de la creatividad hasta una colaboración transparente y un enfoque centrado en el usuario, cada detalle se fusiona para formar una presencia en línea optimizada, adaptable e inolvidable. Con nosotros, tu visión no solo se realiza, sino que se eleva a nuevas alturas digitales.</p>
-        </div>
-           <div class="contenedorPqElegirnos">
-              <div class="izquierda">
-                 <img src="img/productos/lupa.png" alt="">
-                 <p>Creatividad Vanguardista. <br>
-                    Enfoque Centrado en el Usuario. <br>
-                    Optimización para Resultados.
-                 </p>            
-              </div>
-              <div class="derecha">
-                 <img src="img/productos/network.png" alt="">
-                 <p>Colaboración Transparente.<br> <br>
-                    Adaptabilidad e Innovación.
-                 </p>
-                 </div>
-           </div>      
-              </div>
-           </div>
-      </section>
-      <!-- Fin Pq Elegirnos --> 
+  <!-- Pq Elegirnos -->
+  <section>
+    <div class="pqElegirnos">
+
+      <h2>¿Por qué elegirnos?</h2>
+      <p>En webminds, no simplemente creamos sitios web; damos vida a experiencias digitales únicas. Desde la vanguardia
+        de la creatividad hasta una colaboración transparente y un enfoque centrado en el usuario, cada detalle se
+        fusiona para formar una presencia en línea optimizada, adaptable e inolvidable. Con nosotros, tu visión no solo
+        se realiza, sino que se eleva a nuevas alturas digitales.</p>
+    </div>
+    <div class="contenedorPqElegirnos">
+      <div class="izquierda">
+        <img src="img/productos/lupa.png" alt="">
+        <p>Creatividad Vanguardista. <br>
+          Enfoque Centrado en el Usuario. <br>
+          Optimización para Resultados.
+        </p>
+      </div>
+      <div class="derecha">
+        <img src="img/productos/network.png" alt="">
+        <p>Colaboración Transparente.<br> <br>
+          Adaptabilidad e Innovación.
+        </p>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <!-- Fin Pq Elegirnos -->
   <!-- Pie de pagina -->
   <footer>
     <div class="footer-iconos">
