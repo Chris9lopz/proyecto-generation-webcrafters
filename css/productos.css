@@ -35,7 +35,8 @@
 
 .seo{
     background-color: #F2E6CF;
-    margin: 25px;
+    margin: 0;
+    padding: 60px 0px;
 }
 
 .titulo-posicionamiento{
@@ -45,7 +46,7 @@
 
 .pqElegirnos h2{
     text-align: center;
-    margin-top: 80px;
+    margin-top: 30px;
 }
 .pqElegirnos p{
     text-align: center;
@@ -65,7 +66,7 @@
     column-gap: 85px;
     margin-top: 55px;
     color: white;
-    margin-bottom: 130px;
+    margin-bottom: 60px;
     font-size: 13.5px;
 }
 .contenedorPqElegirnos p {
