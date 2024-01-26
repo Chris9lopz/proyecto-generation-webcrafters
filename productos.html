@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--Metadatos-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contáctenos</title>
+
+  <!--Icono de página-->
+  <link rel="icon" href="img/webMindsLogoSinLetra.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- Iconos de fontawesome -->
+  <script src="https://kit.fontawesome.com/63dee48084.js" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/productos.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <section>
+    <nav class="navbar navbar-expand-md">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+        <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars text-light"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a class="navbar-brand mt-2 mb-lg-0" href="#">
+            <img src="img/webMindsLogo.png" height="60" width="120" alt="Web Minds Logo" loading="lazy" />
+          </a>
+
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mt-2 mb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactenos.html">Contáctenos</a>
+            </li>
+          </ul>
+          <!-- End Left links -->
+        </div>
+
+        <!-- End Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+          <!-- Icon -->
+          <a class="text-reset me-3" href="#">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+
+          <!-- Avatar -->
+          <div class="dropdown">
+            <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+              id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
+              <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25"
+                alt="Black and White Portrait of a Man" loading="lazy" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+              <li>
+                <a class="dropdown-item" href="#">Mi Perfil</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Configuración</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Salir</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Right elements -->
+      </div>
+      <!-- End Container wrapper -->
+    </nav>
+    <!-- End Navbar -->
+  </section>
+  <!-- End Navbar -->
+
+    <!-- banner -->
+
+  <div class="fondo text-center d-flex justify-content-center align-items-center">
+    <div class="row align-items-center">
+      <div class="col px-5 py-3 columna-imagen">
+        <img class="img-banner" src="img/productos/responsive.png" alt="responsive">
+      </div>
+      <div class="col px-5 pt-4">
+        <h1 class="titulo-banner">Se ve perfecto desde cualquier dispositivo</h1>
+        <br>
+        <p class="texto-banner">Las imágenes adaptables y los textos responsivos permiten que su sitio web
+          siempre luzca increible, sin importar el tamaño de la pantalla y la densidad de los píxeles</p>
+      </div>
+    </div>
+  </div>
+  <!-- fin banner -->
+
+  
+
+  <!---Productos-->
+      <div class="contenedor-filtroDeproductos">
+        <div class="lst-filtroProductos">
+            <h2>Filtros</h2>
+            
+            <div id="myDropdownMenu" class="myDropdownMenu" >
+                <div class=" dropdown-toggle-menu" type="button" id="dropdownMenuButton1" >Todas las plantillas</div>
+                
+                <ul class="lst-filtro  dropdown-menu " id="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li class="filter-item dropdown-item-menu  active" data-filter="all">Todas las plantillas</li>
+                <li class="filter-item  dropdown-item.menu" data-filter="ropa">Ropa y moda</li>
+                <li class="filter-item  dropdown-item-menu" data-filter="bebidasComidas">Bebidas y comida</li>
+                <li class="filter-item  dropdown-item-menu" data-filter="mascotas">Cuidados de mascota</li>
+                <li class="filter-item  dropdown-item-menu" data-filter="belleza">Belleza y cometicos</li>
+                <li class="filter-item  dropdown-item-menu" data-filter="zapatos">Zapatos y deportivos</li>
+                <li class="filter-item  dropdown-item-menu" data-filter="tecnologia">Tecnología</li>
+                <li class="filter-item  dropdown-item-menu" data-filter="juego">Juegos y entretenimiento</li>
+            </ul>
+            </div>
+            
+        </div>
+        <div class="galeria-filtroProductos">
+            <h2 class="plantilla">Plantillas</h2>
+            <div class="row-galeria ">
+                
+                
+                    <div class="productos card  ropa" >
+                        <img src="img/productos/plantilla.jpg" class="card-img-top  carrito-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text categoria">Ropa y moda</p>
+                        <p class="card-text precio">Precio</p>
+                        </div>
+                        <div class="card-body carrito">
+                            
+                            <img src="img/productos/carrito.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="productos card  bebidasComidas" >
+                        <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text categoria">Bebidas y comida</p>
+                        <p class="card-text precio">Precio</p>
+                        </div>
+                        <div class="card-body carrito">
+                            
+                            <img src="img/productos/carrito.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="productos card  mascotas" >
+                        <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text categoria">Cuidados de mascota</p>
+                        <p class="card-text precio">Precio</p>
+                        </div>
+                        <div class="card-body carrito">
+                            
+                            <img src="img/productos/carrito.svg" alt="">
+                        </div>
+                    </div>
+                
+                    <div class="productos card  belleza" >
+                        <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text categoria">Belleza y cometicos</p>
+                        <p class="card-text precio">Precio</p>
+                        </div>
+                        <div class="card-body carrito">
+                            
+                            <img src="img/productos/carrito.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="productos card  zapatos" >
+                        <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text categoria">Zapatos y deportivos</p>
+                        <p class="card-text precio">Precio</p>
+                        </div>
+                        <div class="card-body carrito">
+                            
+                            <img src="img/productos/carrito.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="productos card  tecnologia" >
+                        <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text categoria">Tecnología</p>
+                        <p class="card-text precio">Precio</p>
+                        </div>
+                        <div class="card-body carrito">
+                            
+                            <img src="img/productos/carrito.svg" alt="">
+                        </div>
+                    </div>
+              
+                
+                    <div class="productos card  juego" >
+                        <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text categoria">Juegos y entretenimiento</p>
+                        <p class="card-text precio">Precio</p>
+                        </div>
+                        <div class="card-body carrito">
+                            
+                            <img src="img/productos/carrito.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="productos card  tecnologia" >
+                        <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text categoria">Tecnología</p>
+                        <p class="card-text precio">Precio</p>
+                        </div>
+                        <div class="card-body carrito">
+                            
+                            <img src="img/productos/carrito.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="productos card  zapatos" >
+                        <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+                        <div class="card-body">
+                        <p class="card-text categoria">Zapatos y deportivos</p>
+                        <p class="card-text precio">Precio</p>
+                        </div>
+                        <div class="card-body carrito">
+                            
+                            <img src="img/productos/carrito.svg" alt="">
+                        </div>
+                    </div>
+              
+              </div>
+        </div>
+            
+      </div>
+   <!---Fin productos-->
+
+
+  <!--Planes-->
+  <section class="bg-light">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2 class="mt-5">Planes</h2>
+        <p class="lead text-muted">Elige un plan que se ajuste a tus necesidades</p>
+      </div>
+      <div class="row my-5 align-items-center justify-content-center">
+        <div class="col-8 col-sm-4 col-xl-3 card-mb-price">
+          <div class="card border-0">
+            <div class="card-body text-center py-4">
+              <h4 class="card-title">Started Pack</h4>
+              <p class="lead card-subtitle">Básico</p>
+              <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
+              <p class="card-text mx-4 text-muted d-none d-md-block text-justify">Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Sint vero, exercitationem quidem numquam, labore quaerat corporis ratione
+                possimus dicta dolore optio dolorum magni est obcaecati hic aspernatur commodi delectus fugit?</p>
+              <a href="#" class="btn btn-outline-primary btn-lg mt-3">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-9 col-sm-4 col-xl-3 card-mb-price">
+          <div class="card border-primary border-2">
+            <div class="card-header bg-primary text-center text-light">Most Popular</div>
+            <div class="card-body text-center py-5">
+              <h4 class="card-title">Progress Pro</h4>
+              <p class="lead card-subtitle">Intermedio</p>
+              <p class="display-4 my-4 text-primary fw-bold">$12.99</p>
+              <p class="card-text mx-4 text-muted d-none d-md-block">Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Sint vero, exercitationem quidem numquam, labore quaerat corporis ratione possimus dicta dolore
+                optio dolorum magni est obcaecati hic aspernatur commodi delectus fugit?</p>
+              <a href="#" class="btn btn-outline-primary btn-lg mt-3">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-8 col-sm-4 col-xl-3">
+          <div class="card border-0">
+            <div class="card-body text-center py-4">
+              <h4 class="card-title">Ultimate Uplift</h4>
+              <p class="lead card-subtitle">Avanzado</p>
+              <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
+              <p class="card-text mx-4 text-muted d-none d-md-block">Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Sint vero, exercitationem quidem numquam, labore quaerat corporis ratione possimus dicta dolore
+                optio dolorum magni est obcaecati hic aspernatur commodi delectus fugit?</p>
+              <a href="#" class="btn btn-outline-primary btn-lg mt-3">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Tabla comparativa de planes-->
+  <section>
+    <div class="container-fluid my-5">
+      <div class="">
+        <h2 class="m-4">Selecciona el mejor plan para ti</h2>
+      </div>
+      <div class="table-responsive mx-4">
+        <table class="table text-center">
+          <thead class="table-primary">
+            <tr>
+              <th class="fw-bold">Caracteristicas</th>
+              <th class="fw-bold">Started Pack</th>
+              <th class="fw-bold">Progress Pro</th>
+              <th class="fw-bold">Ultimate Uplift</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Página web responsiva con cualquier dispositivo</td>
+              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px"/></td>
+            </tr>
+            <tr>
+              <td>Posicionamiento SEO</td>
+              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px"/></td>
+            </tr>
+            <tr>
+              <td>Servicio de asistencia telefónica, chat y correo</td>
+              <td></td>
+              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px"/></td>
+            </tr>
+            <tr>
+              <td>Servicios de branding</td>
+              <td></td>
+              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px"/></td>
+            </tr>
+            <tr>
+              <td>Animaciones exclusivas</td>
+              <td></td>
+              <td></td>
+              <td><img src="img/productos/check.svg" width="25px"/></td>
+            </tr>
+            <tr>
+              <td>Hosting en servicios nube AWS</td>
+              <td></td>
+              <td></td>
+              <td><img src="img/productos/check.svg" width="25px"/></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- posicionamiento SEO -->
+  <div class="seo text-center d-flex justify-content-center align-items-center">
+    <div class="row align-items-center">
+      <div class="col p-3">
+        <div>
+          <h2 class="titulo-posicionamiento">Posicionamiento SEO</h2>
+        </div>
+      </div>
+      <div class="col p-2">
+        <p class="texto-posicionamiento">En WebMinds nuestro compromiso es potenciar su presencia digital,
+          mediante un
+          sitio visualmente atractivo y con las más altas cotas en los resultados de búsqueda. Desde la
+          optimización del código y la estructura del
+          sitio hasta la implementación de estrategias de palabras clave y la mejora de la experiencia del
+          usuario, nuestro enfoque integral garantiza que su presencia en línea sea altamente visible para
+          aquellos que buscan sus productos o servicios.</p>
+      </div>
+    </div>
+  </div>
+  <!-- fin posicionamiento SEO -->
+
+    <!-- Pq Elegirnos -->   
+    <section>
+        <div class="pqElegirnos">
+           
+           <h2>¿Por qué elegirnos?</h2>
+           <p>En webminds, no simplemente creamos sitios web; damos vida a experiencias digitales únicas. Desde la vanguardia de la creatividad hasta una colaboración transparente y un enfoque centrado en el usuario, cada detalle se fusiona para formar una presencia en línea optimizada, adaptable e inolvidable. Con nosotros, tu visión no solo se realiza, sino que se eleva a nuevas alturas digitales.</p>
+        </div>
+           <div class="contenedorPqElegirnos">
+              <div class="izquierda">
+                 <img src="img/productos/lupa.png" alt="">
+                 <p>Creatividad Vanguardista. <br>
+                    Enfoque Centrado en el Usuario. <br>
+                    Optimización para Resultados.
+                 </p>            
+              </div>
+              <div class="derecha">
+                 <img src="img/productos/network.png" alt="">
+                 <p>Colaboración Transparente.<br> <br>
+                    Adaptabilidad e Innovación.
+                 </p>
+                 </div>
+           </div>      
+              </div>
+           </div>
+      </section>
+      <!-- Fin Pq Elegirnos --> 
+  <!-- Pie de pagina -->
+  <footer>
+    <div class="footer-iconos">
+      <i class="fa-brands fa-instagram" style="color: #ffffff; margin: 20px"></i>
+      <i class="fa-brands fa-whatsapp" style="color: #ffffff; margin: 20px"></i>
+      <i class="fa-regular fa-envelope" style="color: #ffffff; margin: 20px"></i>
+    </div>
+    <div class="footer-info-contenedor">
+      <p class="footer-info">Terminos</p>
+      <p class="footer-info">Privacidad</p>
+      <p class="footer-info">Cookies</p>
+    </div>
+    <div class="brand-container footer-info pt-1"> <b> &copy;2024 Web Minds</b></div>
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+  <script src="js/productos.js"></script>
+</body>
+
+</html>
