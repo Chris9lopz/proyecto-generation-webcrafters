@@ -73,6 +73,9 @@ filterElements.addEventListener("click", (e)=>{
             
             // Actualizar el texto del botón con el texto seleccionado
             dropdownButton.innerText = selectedText;
+            
+            
+
         });
     });
 
@@ -80,25 +83,22 @@ filterElements.addEventListener("click", (e)=>{
 
 
     /************************************ */
+  
 
-    document.getElementById("myDropdown").classList.toggle("display");
-
-
-// Close the dropdown if the user clicks outside of it
-
-if (!e.target.matches('.dropdown-toggle-menu')) {
-    var dropdowns = document.getElementsByClassName("dropdown-menu");
-    var i;
+if (!e.target.matches('.lst-filtro')) {
+    let dropdowns = document.getElementsByClassName("dropdown-menu");
+    
     for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('display')) {
-        openDropdown.classList.remove('display');
+      let openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('menus')) {
+        openDropdown.classList.add('menus')
+        openDropdown.classList.remove('menus');
+      }else{
+        openDropdown.classList.remove('menus');
+        openDropdown.classList.add('menus')
+        
       }
     }
-}
-    
-    
+  }
+
 });
-
-
-

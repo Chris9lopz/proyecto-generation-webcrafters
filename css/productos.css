@@ -104,7 +104,9 @@
     display: contents;
 }
 
-
+.dropdown-toggle-menu{
+    visibility: hidden;
+}
 
 
 .lst-filtro .filter-item.active{
@@ -124,17 +126,7 @@ div.btn{
         opacity: 1;
     }
 }
-@media only screen and (max-width:1100px){
-    .lst-filtro li{
-        font-size: 12px;
-    }
-    .productos{
-        width: 45%;
-    }
-    .galeria-filtroProductos{
-        width: 90%;
-    }
-}
+
 
 /*estilos posicionamiento seo*/
 
@@ -203,6 +195,18 @@ div.btn{
 /* Fin estilos pq elegirnos */
 
 /* media queries */
+
+@media only screen and (max-width:1100px){
+    .lst-filtro li{
+        font-size: 12px;
+    }
+    .productos{
+        width: 45%;
+    }
+    .galeria-filtroProductos{
+        width: 90%;
+    }
+}
 @media (max-width: 600px) {
    
     .col {
@@ -224,8 +228,12 @@ div.btn{
     }
 
     /*producto carrito*/
+    .row-galeria{
+        flex-direction: column;
+    }
     .productos{
-        width: 100%;
+        width: 80%;
+        margin: 10px auto ;
     }
     .galeria-filtroProductos{
         display: flex;
@@ -310,33 +318,20 @@ div.btn{
     }
 
     
-    .toogles{
-        visibility: visible;
-        width: 100%;
+    
+    .menus{
+        visibility: hidden;
+        position: absolute;
     }
+
     .plantilla{
         visibility: hidden;
         position: absolute;
     }
-    .display{
-        display: block;
-    }
-
-    
 }
 
 
-@media only screen and (max-width:1100px){
-    .lst-filtro li{
-        font-size: 12px;
-    }
-    .productos{
-        width: 45%;
-    }
-    .galeria-filtroProductos{
-        width: 100%;
-    }
-}
+
 
 @media (min-width: 861px) {
     /*estilos*/
