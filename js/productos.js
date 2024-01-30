@@ -39,5 +39,66 @@ console.log(producto11.comprarProducto());
 
 
 
+/*************productos************** */
+
+const filterElements = document.querySelector(".lst-filtroProductos");
+const  plantillaItems =  document.querySelectorAll(".card");
+filterElements.addEventListener("click", (e)=>{
+    if(e.target.classList.contains("filter-item")){
+        filterElements.querySelector(".active").classList.remove("active");
+        e.target.classList.add("active");
+
+        const filterValue = e.target.getAttribute("data-filter");
+        plantillaItems.forEach(item =>{
+            if(item.classList.contains(filterValue) || filterValue == "all"){
+                item.classList.remove("hide");
+                item.classList.add("show");
+            }else{
+                item.classList.remove("show");
+                item.classList.add("hide");
+            }
+        })
+    }
 
 
+    // Obtener elementos necesarios
+    const dropdownButton = document.getElementById('dropdownMenuButton1');
+    const dropdownItems = document.querySelectorAll('.filter-item');
+
+    // Agregar evento de clic a cada elemento de la lista
+    dropdownItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            // Obtener el texto del elemento clicado
+            let selectedText = item.innerText;
+            
+            // Actualizar el texto del botón con el texto seleccionado
+            dropdownButton.innerText = selectedText;
+            
+            
+
+        });
+    });
+
+
+
+
+    /************************************ */
+  
+
+if (!e.target.matches('.lst-filtro')) {
+    let dropdowns = document.getElementsByClassName("dropdown-menu");
+    
+    for (i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('menus')) {
+        openDropdown.classList.add('menus')
+        openDropdown.classList.remove('menus');
+      }else{
+        openDropdown.classList.remove('menus');
+        openDropdown.classList.add('menus')
+        
+      }
+    }
+  }
+
+});
