@@ -1,45 +1,52 @@
-class Productos {
-    constructor (nombre, precio, imagenPlantilla, categoria){
-        this.nombre = nombre;
-        this.precio = precio;
-        this.imagenPlantilla = imagenPlantilla;
-        this.categoria = categoria;
-    }
+// Crear una clase con objetos
+class Plantilla {
 
-    comprarProducto() {
-        return `{nombre: ${this.nombre} ,precio: ${this.precio}, imagenPlantilla: ${this.imagenPlantilla}, categoria: ${this.categoria}}`
-    }
+  constructor(img, categoria, nombre, precio) {
+    this._img = '';
+    this._categoria = '';
+    this._nombre = '';
+    this._precio = '';
+  }
+
+  getImg() {
+    return this._img;
+  }
+
+  setImg(newImg) {
+    return (this._img = newImg);
+  }
+
+  getCategoria() {
+    return this._categoria;
+  }
+
+  setCategoria(newCategoria) {
+    return (this._categoria = newCategoria);
+  }
+
+  getNombre() {
+    return this._nombre;
+  }
+
+  setNombre(newNombre) {
+    return (this._nombre = newNombre.replace(/\s+/g, ' ').trim());
+  }
+
+  getPrecio() {
+    return this._precio;
+  }
+
+  setPrecio(newPrecio) {
+    return (this._precio = newPrecio.replace('$',''));
+  }
+
+  establecerObjeto() {
+    return `{img: ${this._img}, categoria: ${this._categoria}, nombre: ${this._nombre}, precio: ${this._precio} }`;
+  }
 }
 
-const producto1 = new Productos("Plantilla 1", 100, ".\img\foto1.jpg", "Ropa y Moda");
-const producto2 = new Productos("Plantilla 2", 100, ".\img\foto1.jpg", "Ropa y Moda");
-const producto3 = new Productos("Plantilla 3", 100, ".\img\foto1.jpg", "Ropa y Moda");
-const producto4 = new Productos("Plantilla 4", 100, ".\img\foto1.jpg", "Belleza");
-const producto5 = new Productos("Plantilla 5", 100, ".\img\foto1.jpg", "Ropa y Moda");
-const producto6 = new Productos("Plantilla 6", 100, ".\img\foto1.jpg", "Ropa y Moda");
-const producto7 = new Productos("Plantilla 7", 100, ".\img\foto1.jpg", "Cosmeticos");
-const producto8 = new Productos("Plantilla 8", 100, ".\img\foto1.jpg", "Ropa y Moda");
-const producto9 = new Productos("Plantilla 9", 100, ".\img\foto1.jpg", "Tecnología");
-const producto10 = new Productos("Plantilla 10", 100, ".\img\foto1.jpg", "Ropa y Moda");
-const producto11 = new Productos("Plantilla 11", 100, ".\img\foto1.jpg", "Ropa y Moda");
 
-console.log(producto1.comprarProducto());
-console.log(producto2.comprarProducto());
-console.log(producto3.comprarProducto());
-console.log(producto4.comprarProducto());
-console.log(producto5.comprarProducto());
-console.log(producto6.comprarProducto());
-console.log(producto7.comprarProducto());
-console.log(producto8.comprarProducto());
-console.log(producto9.comprarProducto());
-console.log(producto10.comprarProducto());
-console.log(producto11.comprarProducto());
-
-
-
-
-
-/*************productos************** */
+/*************Productos************** */
 
 const filterElements = document.querySelector(".lst-filtroProductos");
 const  plantillaItems =  document.querySelectorAll(".card");
