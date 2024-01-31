@@ -104,3 +104,19 @@ filterElements.addEventListener("click", (e) => {
     }
   }
 });
+
+
+// Crear una instancias de la clase Productos
+let producto1 = new Productos();
+let producto2 = new Productos();
+let producto3 = new Productos();
+let producto4 = new Productos();
+let producto5 = new Productos();
+let producto6 = new Productos();
+let producto7 = new Productos();
+let producto8 = new Productos();
+let producto9 = new Productos();
+
+// Declaración de llaves de producto
+const keys = ["img", "categoria", "nombre", "precio"];
+
