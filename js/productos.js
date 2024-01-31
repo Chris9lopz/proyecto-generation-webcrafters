@@ -120,3 +120,32 @@ let producto9 = new Productos();
 // Declaración de llaves de producto
 const keys = ["img", "categoria", "nombre", "precio"];
 
+// Declaración de objeto shop cart
+let prod1 = document.getElementById('prod-1');
+let prod2 = document.getElementById('prod-2');
+let prod3 = document.getElementById('prod-3');
+let prod4 = document.getElementById('prod-4');
+let prod5 = document.getElementById('prod-5');
+let prod6 = document.getElementById('prod-6');
+let prod7 = document.getElementById('prod-7');
+let prod8 = document.getElementById('prod-8');
+let prod9 = document.getElementById('prod-9');
+
+// Declaración de función para almacenar en localstorage
+function procesarElemento(elementoGetID){
+  elementoGetID.addEventListener("click", () =>{
+  let cardElement = aElement.closest(".card");
+
+  // Recuperar el src de la imagen
+  let imgSrc = cardElement.querySelector("img").src;
+
+  // Recuperar el contenido del título
+  let titleContent = cardElement.querySelector("h5").textContent;
+
+  // Recuperar el contenido del párrafo
+  let paragraphContent = cardElement.querySelector("p").textContent;
+
+  // Recuperar el contenido de un párrafo con identificador
+  let specificParagraphContent = cardElement.querySelector("#price").textContent;
+  });
+}
