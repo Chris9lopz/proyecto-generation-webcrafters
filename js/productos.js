@@ -1,5 +1,5 @@
 // Crear una clase con objetos
-class Plantilla {
+class Productos {
 
   constructor(img, categoria, nombre, precio) {
     this._img = '';
