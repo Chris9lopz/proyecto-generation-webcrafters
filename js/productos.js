@@ -116,7 +116,7 @@ let producto7 = new Productos();
 let producto8 = new Productos();
 let producto9 = new Productos();
 
-// Declaración de llaves de producto
+// Declaración de llaves de producto para localstorage
 const keys = ["img", "categoria", "nombre", "precio"];
 
 // Declaración de objeto shop cart
@@ -146,9 +146,14 @@ let instanciaProducto = [
 ];
 
 /// Declaración de función para almacenar en localstorage
-function manejarClick(producto, instanciaProducto) {
+function almacenarProducto(producto, instanciaProducto) {
+  
+  // Crear evento de elemento asignado por id
   producto.addEventListener("click", () => {
+    
     let aElement = producto;
+
+    // Identificar elemento contenedor card
     let cardElement = aElement.closest(".card");
 
     // Recuperar el src de la imagen
@@ -163,13 +168,16 @@ function manejarClick(producto, instanciaProducto) {
     // Recuperar el contenido de un párrafo con identificador
     let specificParagraphContent = cardElement.querySelector(".precio").textContent;
 
+    // Set cada valor de card a respectiva instancia de clase producto
     instanciaProducto.setImg(imgSrc);
     instanciaProducto.setNombre(titleContent);
     instanciaProducto.setCategoria(paragraphContent);
     instanciaProducto.setPrecio(specificParagraphContent);
 
+    // Recorrer keys para almacenamiento en localstorage
     for (let key of keys) {
 
+      // Almacenar local storage en base a key
       switch (key) {
         case 'img':
           localStorage.setItem(key, JSON.stringify(instanciaProducto.getImg()));
@@ -189,7 +197,7 @@ function manejarClick(producto, instanciaProducto) {
   });
 }
 
-// Aplicar la función manejarClick a cada producto e instancia de producto
+// Aplicar la función a cada producto e instancia de producto
 for (let i = 0; i < productos.length; i++) {
-  manejarClick(productos[i], instanciaProducto[i]);
+  almacenarProducto(productos[i], instanciaProducto[i]);
 }
