@@ -105,7 +105,6 @@ filterElements.addEventListener("click", (e) => {
   }
 });
 
-
 // Crear una instancias de la clase Productos
 let producto1 = new Productos();
 let producto2 = new Productos();
@@ -121,31 +120,76 @@ let producto9 = new Productos();
 const keys = ["img", "categoria", "nombre", "precio"];
 
 // Declaración de objeto shop cart
-let prod1 = document.getElementById('prod-1');
-let prod2 = document.getElementById('prod-2');
-let prod3 = document.getElementById('prod-3');
-let prod4 = document.getElementById('prod-4');
-let prod5 = document.getElementById('prod-5');
-let prod6 = document.getElementById('prod-6');
-let prod7 = document.getElementById('prod-7');
-let prod8 = document.getElementById('prod-8');
-let prod9 = document.getElementById('prod-9');
+let productos = [
+  document.getElementById('prod-1'),
+  document.getElementById('prod-2'),
+  document.getElementById('prod-3'),
+  document.getElementById('prod-4'),
+  document.getElementById('prod-5'),
+  document.getElementById('prod-6'),
+  document.getElementById('prod-7'),
+  document.getElementById('prod-8'),
+  document.getElementById('prod-9')
+];
 
-// Declaración de función para almacenar en localstorage
-function procesarElemento(elementoGetID){
-  elementoGetID.addEventListener("click", () =>{
-  let cardElement = aElement.closest(".card");
+// Almacenar instancias de producto para asignación posterior
+let instanciaProducto = [
+  producto1, 
+  producto2, 
+  producto3, 
+  producto4, 
+  producto5, 
+  producto6, 
+  producto7, 
+  producto8, 
+  producto9
+];
 
-  // Recuperar el src de la imagen
-  let imgSrc = cardElement.querySelector("img").src;
+/// Declaración de función para almacenar en localstorage
+function manejarClick(producto, instanciaProducto) {
+  producto.addEventListener("click", () => {
+    let aElement = producto;
+    let cardElement = aElement.closest(".card");
 
-  // Recuperar el contenido del título
-  let titleContent = cardElement.querySelector("h5").textContent;
+    // Recuperar el src de la imagen
+    let imgSrc = cardElement.querySelector("img").src;
 
-  // Recuperar el contenido del párrafo
-  let paragraphContent = cardElement.querySelector("p").textContent;
+    // Recuperar el contenido del título
+    let titleContent = cardElement.querySelector("h5").textContent;
 
-  // Recuperar el contenido de un párrafo con identificador
-  let specificParagraphContent = cardElement.querySelector("#price").textContent;
+    // Recuperar el contenido del párrafo
+    let paragraphContent = cardElement.querySelector("p").textContent;
+
+    // Recuperar el contenido de un párrafo con identificador
+    let specificParagraphContent = cardElement.querySelector(".precio").textContent;
+
+    instanciaProducto.setImg(imgSrc);
+    instanciaProducto.setNombre(titleContent);
+    instanciaProducto.setCategoria(paragraphContent);
+    instanciaProducto.setPrecio(specificParagraphContent);
+
+    for (let key of keys) {
+
+      switch (key) {
+        case 'img':
+          localStorage.setItem(key, JSON.stringify(instanciaProducto.getImg()));
+          break;
+        case 'categoria':
+          localStorage.setItem(key, JSON.stringify(instanciaProducto.getCategoria()));
+          break;
+        case 'nombre':
+          localStorage.setItem(key, JSON.stringify(instanciaProducto.getNombre()));
+          break;
+        case 'precio':
+          localStorage.setItem(key, JSON.stringify(instanciaProducto.getPrecio()));
+          break;
+      }
+  
+    }
   });
+}
+
+// Aplicar la función manejarClick a cada producto e instancia de producto
+for (let i = 0; i < productos.length; i++) {
+  manejarClick(productos[i], instanciaProducto[i]);
 }
