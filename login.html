@@ -54,9 +54,12 @@
         <form>
           <h1 class="fw-bold">Crear Cuenta</h1>
           <span>o utiliza tu correo y contraseña</span>
-          <input id="regNombre" type="text" placeholder="Nombre" />
-          <input id="regEmail" type="email" placeholder="Email" />
-          <input id="regPass" type="password" placeholder="Contraseña" />
+          <input class="input" id="regNombre" type="text" placeholder="Nombre" />
+          <div class="alert alert-danger d-none alerta" id= "alerta-nombre-registro" role="alert"></div>
+          <input class="input" id="regEmail" type="email" placeholder="Email" />
+          <div class="alert alert-danger d-none alerta" id= "alerta-correo-registro" role="alert"></div>
+          <input class="input" id="regPass" type="password" placeholder="Contraseña" />
+          <div class="alert alert-danger d-none alerta" id= "alerta-password-registro" role="alert"></div>
           <button class="btn-registro">Registrarse</button>
         </form>
       </div>
@@ -64,8 +67,10 @@
         <form>
           <h1 class="fw-bold">Iniciar Sesión</h1>
           <span>o utiliza tu correo y contraseña</span>
-          <input id="iniEmail" type="email" placeholder="Email" />
-          <input id="iniPass" type="password" placeholder="Contraseña" />
+          <input class="input" id="iniEmail" type="email" placeholder="Email" />
+          <div class="alert alert-danger d-none alerta" id= "alerta-correo" role="alert"></div>
+          <input class="input" id="iniPass" type="password" placeholder="Contraseña" />
+          <div class="alert alert-danger d-none  alerta" id="alerta-password" role="alert"></div>
           <a href="#">¿Olvidaste tu contraseña?</a>
           <button class="btn-inicio">Iniciar</button>
         </form>

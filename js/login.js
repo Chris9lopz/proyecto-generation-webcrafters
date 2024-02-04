@@ -40,10 +40,31 @@ const loginBtn = document.getElementById('login');
 // Agregar evento de toggle clase
 registerBtn.addEventListener('click', () => {
   container.classList.add("active");
+  document.getElementById('iniEmail').value = '';
+  document.getElementById('iniPass').value = '';
+  let alertas = document.querySelectorAll('.alerta');
+  for (alerta of alertas){
+    alerta.classList.add('d-none')   
+  }
+  let inputs = document.querySelectorAll('.input');
+  for (input of inputs){
+    input.style.border = 'none';
+  }
 });
 
 loginBtn.addEventListener('click', () => {
   container.classList.remove("active");
+  document.getElementById('regNombre').value = '';
+  document.getElementById('regEmail').value = '';
+  document.getElementById('regPass').value = '';
+  let alertas = document.querySelectorAll('.alerta');
+  for (alerta of alertas){
+    alerta.classList.add('d-none')   
+  }
+  let inputs = document.querySelectorAll('.input');
+  for (input of inputs){
+    input.style.border = 'none';
+  }
 });
 
 
@@ -58,9 +79,9 @@ const btnRegistro = document.querySelector('.btn-registro');
 // Declarar funcion almacenamiento registro
 function almacenarUsuarioRegistro(instancia) {
   // Agregar un evento de clic al botón
-  btnRegistro.addEventListener('click', function (event) {
+  //btnRegistro.addEventListener('click', function (event) {
     // Prevenir la acción por defecto del botón
-    event.preventDefault();
+    //event.preventDefault();
 
     // Recuperar los valores de los campos de entrada
     let nombre = document.getElementById('regNombre').value;
@@ -80,15 +101,15 @@ function almacenarUsuarioRegistro(instancia) {
     localStorage.setItem('email', instancia.getEmail());
     localStorage.setItem('password', instancia.getPassword());
 
-  });
-}
+  }
+ // );}
 
 // Declarar función de almacenamiento inicio
 function almacenarUsuarioInicio(instancia){
   // Agregar un evento de clic al botón
-btnInicio.addEventListener('click', function (event) {
+  //btnInicio.addEventListener('click', function (event) {
   // Prevenir la acción por defecto del botón
-  event.preventDefault();
+  //event.preventDefault();
 
   // Recuperar los valores de los campos de entrada
   let email = document.getElementById('iniEmail').value;
@@ -104,10 +125,141 @@ btnInicio.addEventListener('click', function (event) {
   // Almacenar contenido usuario en local storage
   localStorage.setItem('email', instancia.getEmail());
   localStorage.setItem('password', instancia.getPassword());
-
-});
 }
+//);
+//}
 
 // Ejecutar la función para usuario nuevo o inicio sesión
-almacenarUsuarioInicio(usuarioInicio);
 almacenarUsuarioRegistro(usuarioRegistro);
+
+//Expresiones para validar campos
+
+const expresionNombre = /^[a-zA-ZÀ-ÿ\s]+$/;
+const expresionCorreo = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+const expresionPassword = /^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/;
+
+//variables mensajes de error
+
+const correoAlertaIniciarSesion = document.querySelector('#alerta-correo');
+const passwordAlertaIniciarSesion = document.querySelector('#alerta-password');
+const nombreAlerta = document.querySelector('#alerta-nombre-registro');
+const correoAlertaRegistro = document.querySelector('#alerta-correo-registro');
+const passwordAlertaRegistro = document.querySelector('#alerta-password-registro');
+
+//validar iniciar sesion
+
+const validarEmailIniciarSesion = () =>{
+  let emailAValidar = document.getElementById('iniEmail').value;
+  if(emailAValidar==0||emailAValidar==''){
+    correoAlertaIniciarSesion.classList.remove('d-none');
+    correoAlertaIniciarSesion.innerText = 'Por favor ingresa un email';
+    document.getElementById("iniEmail").style.border = '2px solid #951018';
+    return false;
+  }else if(!expresionCorreo.test(emailAValidar)){
+    correoAlertaIniciarSesion.classList.remove('d-none');
+    correoAlertaIniciarSesion.innerText = `La direccion de correo: "${emailAValidar}" no es un correo.`;
+    document.getElementById("iniEmail").style.border = '2px solid #951018';
+    return false;
+  }else{
+    correoAlertaIniciarSesion.classList.add('d-none');
+    document.getElementById("iniEmail").style.border = 'none';
+    return true;
+  }
+}
+
+const validarPasswordIniciarSesion = () =>{
+  let passwordAValidar = document.getElementById('iniPass').value;
+  if(passwordAValidar==0 || passwordAValidar==''){
+    passwordAlertaIniciarSesion.classList.remove('d-none');
+    passwordAlertaIniciarSesion.innerText = 'Por favor ingrese una contraseña';
+    document.getElementById('iniPass').style.border = '2px solid #951018';
+    return false;
+  }else if(!expresionPassword.test(passwordAValidar)){
+    passwordAlertaIniciarSesion.classList.remove('d-none');
+    passwordAlertaIniciarSesion.innerText = 'La contraseña debe tener 8 carácteres mínimo entre numeros y letras';
+    document.getElementById('iniPass').style.border = '2px solid #951018';
+    return false;
+  }else{
+    passwordAlertaIniciarSesion.classList.add('d-none');
+    document.getElementById('iniPass').style.border = 'none';
+    return true;
+  }
+}
+
+//validar registrarse
+
+const validarNombre = () => {
+  let nombreAValidar = document.getElementById('regNombre').value;
+  if(nombreAValidar == 0 || nombreAValidar == ''){
+    nombreAlerta.classList.remove('d-none');
+    nombreAlerta.innerText = 'Por favor ingrese un nombre';
+    document.getElementById('regNombre').style.border = '2px solid #951018';
+    return false;
+  }else if(!expresionNombre.test(nombreAValidar)){
+    nombreAlerta.classList.remove('d-none');
+    nombreAlerta.innerText = 'Tiene que ser solamente texto con minusculas o mayusculas';
+    document.getElementById('regNombre').style.border = '2px solid #951018';
+  }else{
+    nombreAlerta.classList.add('d-none');
+    document.getElementById('regNombre').style.border = 'none';
+    return true;
+  }
+}
+
+const validarEmailRegistrar = () =>{
+  let emailAValidar = document.getElementById('regEmail').value;
+  if(emailAValidar==0||emailAValidar==''){
+    correoAlertaRegistro.classList.remove('d-none');
+    correoAlertaRegistro.innerText = 'Por favor ingresa un email';
+    document.getElementById("regEmail").style.border = '2px solid #951018';
+    return false;
+  }else if(!expresionCorreo.test(emailAValidar)){
+    correoAlertaRegistro.classList.remove('d-none');
+    correoAlertaRegistro.innerText = `La direccion de correo: "${emailAValidar}" no es un correo.`;
+    document.getElementById("regEmail").style.border = '2px solid #951018';
+    return false;
+  }else{
+    correoAlertaRegistro.classList.add('d-none');
+    document.getElementById("regEmail").style.border = 'none';
+    return true;
+  }
+}
+
+const validarPasswordRegistrar = () =>{
+  let passwordAValidar = document.getElementById('regPass').value;
+  if(passwordAValidar==0 || passwordAValidar==''){
+    passwordAlertaRegistro.classList.remove('d-none');
+    passwordAlertaRegistro.innerText = 'Por favor ingrese una contraseña';
+    document.getElementById('regPass').style.border = '2px solid #951018';
+    return false;
+  }else if(!expresionPassword.test(passwordAValidar)){
+    passwordAlertaRegistro.classList.remove('d-none');
+    passwordAlertaRegistro.innerText = 'La contraseña debe tener 8 carácteres mínimo entre numeros y letras';
+    document.getElementById('regPass').style.border = '2px solid #951018';
+    return false;
+  }else{
+    passwordAlertaRegistro.classList.add('d-none');
+    document.getElementById('regPass').style.border = 'none';
+    return true;
+  }
+}
+
+
+btnInicio.addEventListener('click', function(e){
+  e.preventDefault();
+  let emailValido = validarEmailIniciarSesion();
+  let passwordValido = validarPasswordIniciarSesion();
+  if(emailValido && passwordValido){
+    almacenarUsuarioInicio(usuarioInicio);
+  }
+})
+
+btnRegistro.addEventListener('click', function(e){
+  e.preventDefault();
+  let nombreValido = validarNombre();
+  let emailValido = validarEmailRegistrar();
+  let passwordValido = validarPasswordRegistrar();
+  if(nombreValido && emailValido && passwordValido){
+    almacenarUsuarioRegistro(usuarioRegistro);
+  }
+})
