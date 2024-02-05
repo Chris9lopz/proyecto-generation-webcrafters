@@ -76,7 +76,8 @@
         <div class="d-flex align-items-center">
           <!-- Icon -->
           <a class="text-reset me-3" href="#">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-shopping-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"></i>
           </a>
 
           <!-- Avatar -->
@@ -104,6 +105,17 @@
       <!-- End Container wrapper -->
     </nav>
     <!-- End Navbar -->
+    <!--Offcanva-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header bg-col text-dark d-flex justify-content-between">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Mi carrito</h5>
+        <span>Items</span>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        
+      </div>
+    </div>
   </section>
   <!-- End Navbar -->
 
