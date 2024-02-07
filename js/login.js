@@ -48,7 +48,29 @@ registerBtn.addEventListener('click', () => {
   }
   let inputs = document.querySelectorAll('.input');
   for (input of inputs){
-    input.style.border = 'none';
+    input.style.border = 'none';    
+  }
+});
+
+document.getElementById("registrate-btn").addEventListener("click", function() {
+  let registrate = document.getElementById("registrate");
+  let pagInicio = document.getElementById("pagInicio");
+  if (registrate.style.display === "none") {
+    registrate.style.display = "block";
+    pagInicio.style.display = "none";
+  } else {
+    registrate.style.display = "none";
+  }
+});
+
+document.getElementById("boton-inicio").addEventListener("click", function() {
+  let registrate = document.getElementById("registrate");
+  let pagInicio = document.getElementById("pagInicio");
+  if (pagInicio.style.display === "none") {
+    pagInicio.style.display = "block";
+    registrate.style.display = "none";
+  } else {
+    pagInicio.style.display = "none";
   }
 });
 
