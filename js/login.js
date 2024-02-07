@@ -251,7 +251,9 @@ btnInicio.addEventListener('click', function(e){
   let passwordValido = validarPasswordIniciarSesion();
   if(emailValido && passwordValido){
     almacenarUsuarioInicio(usuarioInicio);
+    window.location.href = "nosotros.html"
   }
+  
 })
 
 btnRegistro.addEventListener('click', function(e){
