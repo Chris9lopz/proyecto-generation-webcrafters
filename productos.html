@@ -72,7 +72,8 @@
         <div class="d-flex align-items-center">
           <!-- Icon -->
           <a class="text-reset me-3" href="#">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-shopping-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"></i>
           </a>
 
           <!-- Avatar -->
@@ -100,10 +101,23 @@
       <!-- End Container wrapper -->
     </nav>
     <!-- End Navbar -->
+
+    <!--Offcanva-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header bg-col text-dark d-flex justify-content-between">
+        <h5 class="offcanvas-title" id="offcanvasRightLabel">Mi carrito</h5>
+        <span>Items</span>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+
+      </div>
+    </div>
+
   </section>
   <!-- End Navbar -->
 
-    <!-- banner -->
+  <!-- banner -->
 
   <div class="fondo text-center d-flex justify-content-center align-items-center">
     <div class="row align-items-center">
@@ -120,6 +134,138 @@
   </div>
   <!-- fin banner -->
 
+
+
+  <!---Productos-->
+  <div class="contenedor-filtroDeproductos">
+    <div class="lst-filtroProductos">
+      <h2>Filtros</h2>
+
+      <div id="myDropdownMenu" class="myDropdownMenu">
+        <div class=" dropdown-toggle-menu" type="button" id="dropdownMenuButton1"> Todas las plantillas </div>
+
+        <ul class="lst-filtro  dropdown-menu menus" id="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li class="filter-item dropdown-item-menu  active" data-filter="all">Todas las plantillas</li>
+          <li class="filter-item  dropdown-item.menu" data-filter="ropa">Ropa y moda</li>
+          <li class="filter-item  dropdown-item-menu" data-filter="bebidasComidas">Bebidas y comida</li>
+          <li class="filter-item  dropdown-item-menu" data-filter="mascotas">Cuidados de mascota</li>
+          <li class="filter-item  dropdown-item-menu" data-filter="belleza">Belleza y cometicos</li>
+          <li class="filter-item  dropdown-item-menu" data-filter="zapatos">Zapatos y deportivos</li>
+          <li class="filter-item  dropdown-item-menu" data-filter="tecnologia">Tecnología</li>
+          <li class="filter-item  dropdown-item-menu" data-filter="juego">Juegos y entretenimiento</li>
+        </ul>
+      </div>
+
+    <!--Plantillas de producto-->  
+    </div>
+    <div class="galeria-filtroProductos">
+      <h2 class="plantilla">Plantillas</h2>
+      <div class="row-galeria ">
+        <div class="productos card  ropa">
+          <img src="img/productos/plantilla.jpg" class="card-img-top  carrito-img-top" alt="...">
+          <div class="card-body">
+            <h5>Food Fries</h5>
+            <p class="card-text categoria">Ropa y moda</p>
+            <p class="card-text precio">$100</p>
+          </div>
+          <div class="card-body carrito">
+            <a id="prod-1"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        <div class="productos card  bebidasComidas">
+          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+          <div class="card-body">
+            <h5>Food Fries</h5>
+            <p class="card-text categoria">Bebidas y comida</p>
+            <p class="card-text precio">$100</p>
+          </div>
+          <div class="card-body carrito">
+            <a id="prod-2"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        <div class="productos card  mascotas">
+          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+          <div class="card-body">
+            <h5>Food Fries</h5>
+            <p class="card-text categoria">Cuidados de mascota</p>
+            <p class="card-text precio">$100</p>
+          </div>
+          <div class="card-body carrito">
+            <a id="prod-3"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        <div class="productos card  belleza">
+          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+          <div class="card-body">
+            <h5>Food Fries</h5>
+            <p class="card-text categoria">Belleza y cometicos</p>
+            <p class="card-text precio">$100</p>
+          </div>
+          <div class="card-body carrito">
+            <a id="prod-4"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        <div class="productos card  zapatos">
+          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+          <div class="card-body">
+            <h5>Food Fries</h5>
+            <p class="card-text categoria">Zapatos y deportivos</p>
+            <p class="card-text precio">$100</p>
+          </div>
+          <div class="card-body carrito">
+            <a id="prod-5"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        <div class="productos card  tecnologia">
+          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+          <div class="card-body">
+            <h5>Food Fries</h5>
+            <p class="card-text categoria">Tecnología</p>
+            <p class="card-text precio">$100</p>
+          </div>
+          <div class="card-body carrito">
+            <a id="prod-6"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        <div class="productos card  juego">
+          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+          <div class="card-body">
+            <h5>Food Fries</h5>
+            <p class="card-text categoria">Juegos y entretenimiento</p>
+            <p class="card-text precio">$100</p>
+          </div>
+          <div class="card-body carrito">
+            <a id="prod-7"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        <div class="productos card  tecnologia">
+          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+          <div class="card-body">
+            <h5>Food Fries</h5>
+            <p class="card-text categoria">Tecnología</p>
+            <p class="card-text precio">$100</p>
+          </div>
+          <div class="card-body carrito">
+            <a id="prod-8"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        <div class="productos card  zapatos">
+          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
+          <div class="card-body">
+            <h5>Food Fries</h5>
+            <p class="card-text categoria">Zapatos y deportivos</p>
+            <p class="card-text precio">$100</p>
+          </div>
+          <div class="card-body carrito">
+            <a id="prod-9"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---Fin productos-->
+
+
   <!--Planes-->
   <section class="bg-light">
     <div class="container-lg">
@@ -133,7 +279,7 @@
             <div class="card-body text-center py-4">
               <h4 class="card-title">Started Pack</h4>
               <p class="lead card-subtitle">Básico</p>
-              <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
+              <p class="display-5 my-4 text-primary fw-bold">$100</p>
               <p class="card-text mx-4 text-muted d-none d-md-block text-justify">Lorem ipsum, dolor sit amet
                 consectetur adipisicing elit. Sint vero, exercitationem quidem numquam, labore quaerat corporis ratione
                 possimus dicta dolore optio dolorum magni est obcaecati hic aspernatur commodi delectus fugit?</p>
@@ -147,7 +293,7 @@
             <div class="card-body text-center py-5">
               <h4 class="card-title">Progress Pro</h4>
               <p class="lead card-subtitle">Intermedio</p>
-              <p class="display-4 my-4 text-primary fw-bold">$12.99</p>
+              <p class="display-4 my-4 text-primary fw-bold">$150</p>
               <p class="card-text mx-4 text-muted d-none d-md-block">Lorem ipsum, dolor sit amet consectetur adipisicing
                 elit. Sint vero, exercitationem quidem numquam, labore quaerat corporis ratione possimus dicta dolore
                 optio dolorum magni est obcaecati hic aspernatur commodi delectus fugit?</p>
@@ -160,7 +306,7 @@
             <div class="card-body text-center py-4">
               <h4 class="card-title">Ultimate Uplift</h4>
               <p class="lead card-subtitle">Avanzado</p>
-              <p class="display-5 my-4 text-primary fw-bold">$12.99</p>
+              <p class="display-5 my-4 text-primary fw-bold">$250</p>
               <p class="card-text mx-4 text-muted d-none d-md-block">Lorem ipsum, dolor sit amet consectetur adipisicing
                 elit. Sint vero, exercitationem quidem numquam, labore quaerat corporis ratione possimus dicta dolore
                 optio dolorum magni est obcaecati hic aspernatur commodi delectus fugit?</p>
@@ -191,39 +337,39 @@
           <tbody>
             <tr>
               <td>Página web responsiva con cualquier dispositivo</td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
             </tr>
             <tr>
               <td>Posicionamiento SEO</td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
             </tr>
             <tr>
               <td>Servicio de asistencia telefónica, chat y correo</td>
               <td></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
             </tr>
             <tr>
               <td>Servicios de branding</td>
               <td></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
             </tr>
             <tr>
               <td>Animaciones exclusivas</td>
               <td></td>
               <td></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
             </tr>
             <tr>
               <td>Hosting en servicios nube AWS</td>
               <td></td>
               <td></td>
-              <td><img src="img/productos/check.svg" width="25px"/></td>
+              <td><img src="img/productos/check.svg" width="25px" /></td>
             </tr>
           </tbody>
         </table>
@@ -252,32 +398,35 @@
   </div>
   <!-- fin posicionamiento SEO -->
 
-    <!-- Pq Elegirnos -->   
-    <section>
-        <div class="pqElegirnos">
-           
-           <h2>¿Por qué elegirnos?</h2>
-           <p>En webminds, no simplemente creamos sitios web; damos vida a experiencias digitales únicas. Desde la vanguardia de la creatividad hasta una colaboración transparente y un enfoque centrado en el usuario, cada detalle se fusiona para formar una presencia en línea optimizada, adaptable e inolvidable. Con nosotros, tu visión no solo se realiza, sino que se eleva a nuevas alturas digitales.</p>
-        </div>
-           <div class="contenedorPqElegirnos">
-              <div class="izquierda">
-                 <img src="img/productos/lupa.png" alt="">
-                 <p>Creatividad Vanguardista. <br>
-                    Enfoque Centrado en el Usuario. <br>
-                    Optimización para Resultados.
-                 </p>            
-              </div>
-              <div class="derecha">
-                 <img src="img/productos/network.png" alt="">
-                 <p>Colaboración Transparente.<br> <br>
-                    Adaptabilidad e Innovación.
-                 </p>
-                 </div>
-           </div>      
-              </div>
-           </div>
-      </section>
-      <!-- Fin Pq Elegirnos --> 
+  <!-- Pq Elegirnos -->
+  <section>
+    <div class="pqElegirnos">
+
+      <h2>¿Por qué elegirnos?</h2>
+      <p>En webminds, no simplemente creamos sitios web; damos vida a experiencias digitales únicas. Desde la vanguardia
+        de la creatividad hasta una colaboración transparente y un enfoque centrado en el usuario, cada detalle se
+        fusiona para formar una presencia en línea optimizada, adaptable e inolvidable. Con nosotros, tu visión no solo
+        se realiza, sino que se eleva a nuevas alturas digitales.</p>
+    </div>
+    <div class="contenedorPqElegirnos">
+      <div class="izquierda">
+        <img src="img/productos/lupa.png" alt="">
+        <p>Creatividad Vanguardista. <br>
+          Enfoque Centrado en el Usuario. <br>
+          Optimización para Resultados.
+        </p>
+      </div>
+      <div class="derecha">
+        <img src="img/productos/network.png" alt="">
+        <p>Colaboración Transparente.<br> <br>
+          Adaptabilidad e Innovación.
+        </p>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+  <!-- Fin Pq Elegirnos -->
   <!-- Pie de pagina -->
   <footer>
     <div class="footer-iconos">
