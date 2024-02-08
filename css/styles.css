@@ -1,3 +1,13 @@
+:root {
+    --primary: #9CD2D3;
+    --secondary: #2ecc71;
+    
+}
+
+.bg-col {
+    background-color: var(--primary);
+}
+
 /*INICIO CSS RAMA CHRIS*/
 * {
     margin: 0;
