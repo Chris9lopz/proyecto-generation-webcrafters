@@ -1,1 +1,5 @@
 @import url("styles.css");
+
+.ta-justify {
+    text-align: justify;
+}
