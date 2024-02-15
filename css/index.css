@@ -14,13 +14,18 @@
   }
   .carousel-control-prev,
   .carousel-control-next {
-    background-color: #e1e1e1;
+    color: #16153D;
+    background-color: #F2E6CF;
     width: 6vh;
     height: 6vh;
-    border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
   }
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    color: #9CD2D3;
+  }
+
   @media (min-width: 768px) {
     .carousel-item {
       margin-right: 0;
