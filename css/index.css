@@ -4,22 +4,23 @@
     text-align: justify;
 }
 
-.carousel-inner {
+.carrousel-beneficios.carousel-inner {
     padding: 1em;
   }
-  .card {
+  .carrousel-beneficios.card {
     margin: 0 0.5em;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
     border: none;
   }
-  .card-body {
+
+  .carrousel-beneficios.card-body {
     max-height: 250px;
     min-height: 250px;
     overflow: auto;
   }
 
-  .carousel-control-prev,
-  .carousel-control-next {
+  .carrousel-beneficios.carousel-control-prev,
+  .carrousel-beneficios.carousel-control-next {
     color: #16153D;
     background-color: #F2E6CF;
     width: 6vh;
@@ -27,33 +28,33 @@
     top: 50%;
     transform: translateY(-50%);
   }
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover {
+  .carrousel-beneficios.carousel-control-prev:hover,
+  .carrousel-beneficios.carousel-control-next:hover {
     color: #9CD2D3;
   }
 
   @media (min-width: 768px) {
-    .carousel-item {
+    .carrousel-beneficios.carousel-item {
       margin-right: 0;
       flex: 0 0 33.333333%;
       display: block;
     }
-    .carousel-inner {
+    .carrousel-beneficios.carousel-inner {
       display: flex;
     }
   }
-  .card .img-wrapper {
+  .carrousel-beneficios.card .carrousel-beneficios.img-wrapper {
       max-width: 100%;
       height: 13em;
       display: flex;
       justify-content: center;
       align-items: center;
   }
-  .card img {
+  .carrousel-beneficios.card .carrousel-beneficios > img {
       max-height: 100%;
   }
   @media (max-width: 767px) {
-    .card .img-wrapper {
+    .carrousel-beneficios.card .carrousel-beneficios.img-wrapper {
       height: 17em;
     }
   }
@@ -178,15 +179,15 @@
       width: 60%;
   }
 
-  .cards-wrapper {
+  .card-not-wrapper {
       display: flex;
   }
 
-  .card:not(:first-child) {
+  .tarjeta:not(:first-child) {
       display: block;
   }
 
-  .card {
+  .tarjeta {
       margin: 0.5%;
       width: calc(100% / 3);
   }
