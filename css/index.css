@@ -19,17 +19,17 @@
 }
 
 
-.carousel-inner{
+.carrusel-interior{
     padding: 0% 11%;
 }
 
-.card{
+.tarjeta{
     border: none;
     border-radius: 5px;
     box-shadow: 2px 6px 8px 0 rgba(74, 110, 176, 0.5);
 }
 
-.card:not(:first-child) {
+.tarjeta:not(:first-child) {
     display: none;
 }
 
@@ -42,15 +42,15 @@
     margin: 20px 30px 0px 30px;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
+.boton-prev,
+.boton-desp {
     top: 50%;
     transform: translateY(-50%);
     color: white;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+.icono-antes,
+.icono-depues {
     color: #4A6EB0;
 }
 
