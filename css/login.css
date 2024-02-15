@@ -95,6 +95,13 @@ body{
 }
 
 @media (max-width:700px){
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
     .ocultarInicio{
       display: none;
     }
@@ -117,7 +124,11 @@ body{
     .form-container p{
         font-size: 15px;
         margin-top: 15px;
+        margin-bottom:0;
         box-sizing: border-box;
+    }
+    .alerta{
+        font-size: small;
     }
     #pagInicio{
         display: block;
@@ -153,7 +164,10 @@ body{
     .ocultarResponsive{
         display: none;
     }
-    
+    .alerta{
+        font-size: small;
+        padding: 2%;
+    }
     .container{
         background-color: #fff;
         border-radius: 30px;

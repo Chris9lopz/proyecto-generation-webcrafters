@@ -52,7 +52,7 @@ registerBtn.addEventListener('click', () => {
   }
 });
 
-document.getElementById("registrate-btn").addEventListener("click", function() {
+/*document.getElementById("registrate-btn").addEventListener("click", function() {
   let registrate = document.getElementById("registrate");
   let pagInicio = document.getElementById("pagInicio");
   if (registrate.style.display === "none") {
@@ -61,16 +61,30 @@ document.getElementById("registrate-btn").addEventListener("click", function() {
   } else {
     registrate.style.display = "none";
   }
+});*/
+document.getElementById("registrate-btn").addEventListener("click", function(e) {
+  e.preventDefault();
+  let registrate = document.getElementById("registrate");
+  let pagInicio = document.getElementById("pagInicio");
+  if (getComputedStyle(registrate).display === "none") {
+    registrate.style.display = "block";
+    pagInicio.style.display = "none";
+  } else {
+    registrate.style.display = "none";
+    pagInicio.style.display = "block";
+  }
 });
 
 document.getElementById("boton-inicio").addEventListener("click", function() {
   let registrate = document.getElementById("registrate");
   let pagInicio = document.getElementById("pagInicio");
-  if (pagInicio.style.display === "none") {
+  let pageStyle = pagInicio.value
+  if (pageStyle == "none") {
     pagInicio.style.display = "block";
     registrate.style.display = "none";
   } else {
     pagInicio.style.display = "none";
+    registrate.style.display = "block";
   }
 });
 
