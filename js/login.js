@@ -277,7 +277,7 @@ btnInicio.addEventListener('click', function(e){
                 mostrar.classList.remove("mostrar");
                 almacenarUsuarioInicio(usuarioInicio);
                 
-            window.location.href = "nosotros.html"
+            window.location.href = "productos.html"
             }, 2500);// 1s= 1000 milisegundos
 
             setTimeout(() => {
