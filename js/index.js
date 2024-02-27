@@ -1,3 +1,22 @@
+// Firebase App (the core Firebase SDK) is always required and
+// must be listed before other Firebase SDKs
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js'
+import {  getAuth} from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js'
+
+const auth = getAuth();
+
+// Add the Firebase products that you want to use
+const firebaseConfig = {
+  apiKey: "AIzaSyBfF0yCq5dmZna3p8aq3vwXSc4hBuvIQDM",
+  authDomain: "web-minds-colombia.firebaseapp.com",
+  projectId: "web-minds-colombia",
+  storageBucket: "web-minds-colombia.appspot.com",
+  messagingSenderId: "359149667366",
+  appId: "1:359149667366:web:1dcaa9bb5ea574492f92e7"
+};
+
+const app = initializeApp(firebaseConfig);
+
 var multipleCardCarousel = document.querySelector(
     "#carouselExampleControls"
   );
@@ -29,3 +48,4 @@ var multipleCardCarousel = document.querySelector(
   } else {
     $(multipleCardCarousel).addClass("slide");
   }
+
