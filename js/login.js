@@ -244,15 +244,52 @@ const validarPasswordRegistrar = () =>{
   }
 }
 
+ 
+const toast = document.querySelector(".toastXT"),
+     closeIcon = document.querySelector(".close"),
+     progress = document.querySelector(".progressTX");
+     mostrar = document.querySelector(".container-alerts");
+     formulario =document.getElementById("form")
+     volver = document.querySelector('.volver');
+     textAlert= document.querySelector('.text-2');
 
+     volver.addEventListener('click', (e)=>{
+      e.preventDefault();
+      window.location.href = "nosotros.html"
+     })
 btnInicio.addEventListener('click', function(e){
   e.preventDefault();
   let emailValido = validarEmailIniciarSesion();
   let passwordValido = validarPasswordIniciarSesion();
   if(emailValido && passwordValido){
-    almacenarUsuarioInicio(usuarioInicio);
-    window.location.href = "nosotros.html"
+    
+    
+
+    toast.classList.add("active");
+                progress.classList.add("active");
+                mostrar.classList.add("mostrar");
+                textAlert.innerText = 'Has ingresado con exito'
+                
+
+
+            setTimeout(() => {
+                toast.classList.remove("active");
+                mostrar.classList.remove("mostrar");
+                almacenarUsuarioInicio(usuarioInicio);
+                
+            window.location.href = "productos.html"
+            }, 2500);// 1s= 1000 milisegundos
+
+            setTimeout(() => {
+                progress.classList.remove("active");
+                mostrar.classList.remove("mostrar");
+            },2500);
+
   }
+
+  /*alerts*/
+
+  
   
 })
 
@@ -263,5 +300,26 @@ btnRegistro.addEventListener('click', function(e){
   let passwordValido = validarPasswordRegistrar();
   if(nombreValido && emailValido && passwordValido){
     almacenarUsuarioRegistro(usuarioRegistro);
+/*alerts* */
+
+    toast.classList.add("active");
+    progress.classList.add("active");
+    mostrar.classList.add("mostrar");
+
+    setTimeout(() => {
+       toast.classList.remove("active");
+        mostrar.classList.remove("mostrar");
+    }, 2500);
+
+     setTimeout(() => {
+        progress.classList.remove("active");
+        mostrar.classList.remove("mostrar");
+     },2500);
   }
-})
+  formulario.reset();
+
+  
+  
+});
+
+

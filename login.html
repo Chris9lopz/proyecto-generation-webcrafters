@@ -48,10 +48,15 @@
   </head>
 
   <body>
+
+    <div class="volver">
+      <i class="fa-solid fa-arrow-left"></i>
+      <div class="msg-volver">Volver</div>
+    </div>
     <!--Formulario Login-->
     <div class="container" id="container">
       <div class="form-container sign-up">
-        <form>
+        <form id="form">
           <h1 class="fw-bold">Crear Cuenta</h1>
           <span>o utiliza tu correo y contraseña</span>
           <input class="input" id="regNombre" type="text" placeholder="Nombre" />
@@ -91,6 +96,26 @@
           </div>
         </div>
       </div>
+    </div>
+
+      <!--Alers login-->
+    <div class="container-alerts">
+      <div class="toastXT">
+        <div class="toastXT-content">
+            <i class="fas fa-solid fa-check check"></i>
+    
+            <div class="messageTX">
+                
+                <span class="textTX text-2">Te has registrado con exito</span>
+            </div>
+        </div>
+    
+        <i class="fa-solid fa-xmark close"></i>
+    
+        <div class="progressTX"></div>
+    </div>
+    
+    
     </div>
 
     <!--Enlace al JS Lenguajes-->
