@@ -1,0 +1,16 @@
+{
+  "name": "proyecto-generation-webcrafters",
+  "version": "1.0.0",
+  "description": "El proyecto WebMinds se centra en ofrecer servicios de diseño de aplicaciones web a través de tres planes escalonados, que van desde soluciones simples hasta desarrollos más complejos. Los planes disponibles son:",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^10.8.0"
+  }
+}
