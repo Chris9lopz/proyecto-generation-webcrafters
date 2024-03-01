@@ -48,46 +48,41 @@
   </head>
 
   <body>
+
+    <div class="volver">
+      <i class="fa-solid fa-arrow-left"></i>
+      <div class="msg-volver">Volver</div>
+    </div>
     <!--Formulario Login-->
-    <div class="container" id="container" >
-      <div class="form-container sign-up ocultarInicio " id="registrate">
-        <form>
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form id="form">
           <h1 class="fw-bold">Crear Cuenta</h1>
-          <span class="ocultarResponsive">o utiliza tu correo y contraseña</span>
-          <span class="mostrarResponsive">¡Bienvenido a Web Minds! <br>¿Primera vez? Registrate con tus datos personales para utilizar todas las funciones del sitio web.</span>
+          <span>o utiliza tu correo y contraseña</span>
           <input class="input" id="regNombre" type="text" placeholder="Nombre" />
           <div class="alert alert-danger d-none alerta" id= "alerta-nombre-registro" role="alert"></div>
           <input class="input" id="regEmail" type="email" placeholder="Email" />
           <div class="alert alert-danger d-none alerta" id= "alerta-correo-registro" role="alert"></div>
           <input class="input" id="regPass" type="password" placeholder="Contraseña" />
           <div class="alert alert-danger d-none alerta" id= "alerta-password-registro" role="alert"></div>
-          <button class="btn-registro ">Registrarse</button>
-
-          <p class="inicio-sesion"> ¿Ya tienes una cuenta? <a href="pagInicio"><button id="boton-inicio">Inicia sesión</button></a>
-          </p>
-          
+          <button class="btn-registro">Registrarse</button>
         </form>
       </div>
-      <div class="form-container sign-in " id="pagInicio">
-        <form >
+      <div class="form-container sign-in">
+        <form>
           <h1 class="fw-bold">Iniciar Sesión</h1>
-          <span class="ocultarResponsive">o utiliza tu correo y contraseña</span>
-          <span class="mostrarResponsive">¡Bienvenido de regreso! <br> Ingresa tu información personal para acceder a todas las caracteristicas de nuestro sitio web.</span>
+          <span>o utiliza tu correo y contraseña</span>
           <input class="input" id="iniEmail" type="email" placeholder="Email" />
           <div class="alert alert-danger d-none alerta" id= "alerta-correo" role="alert"></div>
           <input class="input" id="iniPass" type="password" placeholder="Contraseña" />
           <div class="alert alert-danger d-none  alerta" id="alerta-password" role="alert"></div>
           <a href="#">¿Olvidaste tu contraseña?</a>
           <button class="btn-inicio">Iniciar</button>
-          <!--Se añade un botón que lleva a la parte de registro, class registrate hace que se esconda en css, registrate-btn se enlaza con el toggle en js-->
-          <p class="registrate"> ¿No tienes cuenta? </p>  
-          <a href="#"><button id="registrate-btn">Regístrate</button></a>        
         </form>
-        
       </div>
       <div class="toggle-container">
         <div class="toggle">
-          <div class="toggle-panel toggle-left"> 
+          <div class="toggle-panel toggle-left">
             <h1>Bienvenido de regreso!</h1>
             <p>Ingresa tu información personal para acceder a todas las caracteristicas de nuestro sitio web.</p>
             <button class="hidden btn-inicio" id="login">Iniciar Sesión</button>
@@ -95,12 +90,32 @@
           <div class="toggle-panel toggle-right">
             <h1>Bienvenido a Web Minds!</h1>
             <p>
-              ¿Primera vez? Registrate con tus datos personales para utilizar todas las funciones del sitio web.
-            </p>        
+              ¿Primera vez? Registrate con sus datos personales para utilizar todas las funciones del sitio web.
+            </p>
             <button class="hidden btn-registro" id="register">Registrarse</button>
           </div>
         </div>
       </div>
+    </div>
+
+      <!--Alers login-->
+    <div class="container-alerts">
+      <div class="toastXT">
+        <div class="toastXT-content">
+            <i class="fas fa-solid fa-check check"></i>
+    
+            <div class="messageTX">
+                
+                <span class="textTX text-2">Te has registrado con exito</span>
+            </div>
+        </div>
+    
+        <i class="fa-solid fa-xmark close"></i>
+    
+        <div class="progressTX"></div>
+    </div>
+    
+    
     </div>
 
     <!--Enlace al JS Lenguajes-->
