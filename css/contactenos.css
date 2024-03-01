@@ -1,0 +1,206 @@
+@import url('styles.css');
+
+/* estilos formulario de contacto */
+
+.contacto-info {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 50px;
+}
+
+.elemento {
+    width: 90%;
+    background-color: #4a6eb0;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: 0;
+    position: absolute;
+    top: 8%;
+    left: 0;
+    right: 80px;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, .7);
+
+}
+
+.contacto {
+    display: none;
+}
+
+.banner-contacto {
+    background-image: url("../img/contactenos/banner.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contactanos {
+    color: #fff;
+    padding: 40px 0px 10px 25px;
+    font-weight: bold;
+}
+
+.formulario {
+    padding: 0 25px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.caja-entrada {
+    margin: 20px 0;
+}
+
+.entrada {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    color: #000;
+    font-size: 16px;
+    min-width: 200px;
+}
+
+.caja-entrada label {
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/***paola****/
+.error {
+    visibility: visible;
+    font-size: 14px;
+    font-weight: bold;
+    color: #630b19;
+    margin: 0;
+    padding: 0;
+}
+
+
+/***end paola***/
+textarea.entrada {
+    resize: none;
+    min-height: 150px;
+    overflow: auto;
+}
+
+.boton:hover {
+    color: white;
+    background-color: #16153D;
+}
+
+.boton {
+    background: #fff;
+    outline: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 20%;
+    font-size: 16px;
+    color: #4a6eb0;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 50px;
+    min-width: 100px;
+}
+
+/* media queries */
+@media (max-width: 600px) {
+    .footer-info-contenedor {
+        display: block;
+
+    }
+
+    .footer-info-contenedor p {
+        align-items: center !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .elemento {
+        box-shadow: 0 0 20px 10px rgba(0, 0, 0, .4);
+        overflow: hidden;
+    }
+
+    .contacto {
+        display: grid;
+    }
+
+    .titulo-contacto {
+        color: #fff;
+        padding-left: 20px;
+        padding-top: 20px;
+        font-size: 22px;
+        font-weight: bolder;
+    }
+
+    .imagen-contacto {
+        height: 320px;
+        width: 320px;
+        border-radius: 25px;
+    }
+
+    .boton {
+        height: 45px;
+        width: 30%;
+        max-width: 150px;
+        min-width: 150px;
+    }
+
+    .contenedor {
+        position: relative;
+    }
+}
+
+@media (min-width: 861px) {
+    .contacto-info {
+        width: 50%;
+    }
+
+    .contenedor-total {
+        height: 1100px;
+    }
+
+    .elemento {
+        max-width: 400px;
+        min-width: 400px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contacto-info {
+        width: 40%;
+    }
+
+    .elemento {
+        max-width: 600px;
+        min-width: 600px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .elemento {
+        max-width: 700px;
+        min-width: 700px;
+    }
+}
+
+@media (max-width:860px) {
+
+    .elemento {
+        position: static !important;
+        margin: 0 auto;
+        max-width: none;
+        min-width: none;
+    }
+
+    .contacto-info{
+        text-align: center;
+    }
+
+}
