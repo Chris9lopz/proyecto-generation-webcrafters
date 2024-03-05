@@ -1,3 +1,19 @@
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js'
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword  } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js'
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBfF0yCq5dmZna3p8aq3vwXSc4hBuvIQDM",
+  authDomain: "web-minds-colombia.firebaseapp.com",
+  projectId: "web-minds-colombia",
+  storageBucket: "web-minds-colombia.appspot.com",
+  messagingSenderId: "359149667366",
+  appId: "1:359149667366:web:1dcaa9bb5ea574492f92e7"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+await auth.authStateReady()
+const currentUser = auth.currentUser;
+
 // Crear clase persona
 class Usuario {
   constructor(nombre, email, password) {
@@ -43,11 +59,11 @@ registerBtn.addEventListener('click', () => {
   document.getElementById('iniEmail').value = '';
   document.getElementById('iniPass').value = '';
   let alertas = document.querySelectorAll('.alerta');
-  for (alerta of alertas){
-    alerta.classList.add('d-none')   
+  for (let alerta of alertas) {
+    alerta.classList.add('d-none')
   }
   let inputs = document.querySelectorAll('.input');
-  for (input of inputs){
+  for (let input of inputs) {
     input.style.border = 'none';
   }
 });
@@ -58,11 +74,11 @@ loginBtn.addEventListener('click', () => {
   document.getElementById('regEmail').value = '';
   document.getElementById('regPass').value = '';
   let alertas = document.querySelectorAll('.alerta');
-  for (alerta of alertas){
-    alerta.classList.add('d-none')   
+  for (let alerta of alertas) {
+    alerta.classList.add('d-none')
   }
   let inputs = document.querySelectorAll('.input');
-  for (input of inputs){
+  for (let input of inputs) {
     input.style.border = 'none';
   }
 });
@@ -80,32 +96,32 @@ const btnRegistro = document.querySelector('.btn-registro');
 function almacenarUsuarioRegistro(instancia) {
   // Agregar un evento de clic al botón
   //btnRegistro.addEventListener('click', function (event) {
-    // Prevenir la acción por defecto del botón
-    //event.preventDefault();
+  // Prevenir la acción por defecto del botón
+  //event.preventDefault();
 
-    // Recuperar los valores de los campos de entrada
-    let nombre = document.getElementById('regNombre').value;
-    let email = document.getElementById('regEmail').value;
-    let password = document.getElementById('regPass').value;
+  // Recuperar los valores de los campos de entrada
+  let nombre = document.getElementById('regNombre').value;
+  let email = document.getElementById('regEmail').value;
+  let password = document.getElementById('regPass').value;
 
-    // Almacenar instancia
-    instancia.setNombre(nombre);
-    instancia.setEmail(email);
-    instancia.setPassword(password);
+  // Almacenar instancia
+  instancia.setNombre(nombre);
+  instancia.setEmail(email);
+  instancia.setPassword(password);
 
-    // Eliminar contenido actual local storage
-    localStorage.clear();
+  // Eliminar contenido actual local storage
+  localStorage.clear();
 
-    // Almacenamiento local storage
-    localStorage.setItem('nombre', instancia.getNombre());
-    localStorage.setItem('email', instancia.getEmail());
-    localStorage.setItem('password', instancia.getPassword());
+  // Almacenamiento local storage
+  localStorage.setItem('nombre', instancia.getNombre());
+  localStorage.setItem('email', instancia.getEmail());
+  localStorage.setItem('password', instancia.getPassword());
 
-  }
- // );}
+}
+// );}
 
 // Declarar función de almacenamiento inicio
-function almacenarUsuarioInicio(instancia){
+function almacenarUsuarioInicio(instancia) {
   // Agregar un evento de clic al botón
   //btnInicio.addEventListener('click', function (event) {
   // Prevenir la acción por defecto del botón
@@ -125,6 +141,7 @@ function almacenarUsuarioInicio(instancia){
   // Almacenar contenido usuario en local storage
   localStorage.setItem('email', instancia.getEmail());
   localStorage.setItem('password', instancia.getPassword());
+  localStorage.setItem('logueado', '0');
 }
 //);
 //}
@@ -148,38 +165,38 @@ const passwordAlertaRegistro = document.querySelector('#alerta-password-registro
 
 //validar iniciar sesion
 
-const validarEmailIniciarSesion = () =>{
+const validarEmailIniciarSesion = () => {
   let emailAValidar = document.getElementById('iniEmail').value;
-  if(emailAValidar==0||emailAValidar==''){
+  if (emailAValidar == 0 || emailAValidar == '') {
     correoAlertaIniciarSesion.classList.remove('d-none');
     correoAlertaIniciarSesion.innerText = 'Por favor ingresa un email';
     document.getElementById("iniEmail").style.border = '2px solid #951018';
     return false;
-  }else if(!expresionCorreo.test(emailAValidar)){
+  } else if (!expresionCorreo.test(emailAValidar)) {
     correoAlertaIniciarSesion.classList.remove('d-none');
     correoAlertaIniciarSesion.innerText = `La direccion de correo: "${emailAValidar}" no es un correo.`;
     document.getElementById("iniEmail").style.border = '2px solid #951018';
     return false;
-  }else{
+  } else {
     correoAlertaIniciarSesion.classList.add('d-none');
     document.getElementById("iniEmail").style.border = 'none';
     return true;
   }
 }
 
-const validarPasswordIniciarSesion = () =>{
+const validarPasswordIniciarSesion = () => {
   let passwordAValidar = document.getElementById('iniPass').value;
-  if(passwordAValidar==0 || passwordAValidar==''){
+  if (passwordAValidar == 0 || passwordAValidar == '') {
     passwordAlertaIniciarSesion.classList.remove('d-none');
     passwordAlertaIniciarSesion.innerText = 'Por favor ingrese una contraseña';
     document.getElementById('iniPass').style.border = '2px solid #951018';
     return false;
-  }else if(!expresionPassword.test(passwordAValidar)){
+  } else if (!expresionPassword.test(passwordAValidar)) {
     passwordAlertaIniciarSesion.classList.remove('d-none');
     passwordAlertaIniciarSesion.innerText = 'La contraseña debe tener 8 carácteres mínimo entre numeros y letras';
     document.getElementById('iniPass').style.border = '2px solid #951018';
     return false;
-  }else{
+  } else {
     passwordAlertaIniciarSesion.classList.add('d-none');
     document.getElementById('iniPass').style.border = 'none';
     return true;
@@ -190,136 +207,144 @@ const validarPasswordIniciarSesion = () =>{
 
 const validarNombre = () => {
   let nombreAValidar = document.getElementById('regNombre').value;
-  if(nombreAValidar == 0 || nombreAValidar == ''){
+  if (nombreAValidar == 0 || nombreAValidar == '') {
     nombreAlerta.classList.remove('d-none');
     nombreAlerta.innerText = 'Por favor ingrese un nombre';
     document.getElementById('regNombre').style.border = '2px solid #951018';
     return false;
-  }else if(!expresionNombre.test(nombreAValidar)){
+  } else if (!expresionNombre.test(nombreAValidar)) {
     nombreAlerta.classList.remove('d-none');
     nombreAlerta.innerText = 'Tiene que ser solamente texto con minusculas o mayusculas';
     document.getElementById('regNombre').style.border = '2px solid #951018';
-  }else{
+  } else {
     nombreAlerta.classList.add('d-none');
     document.getElementById('regNombre').style.border = 'none';
     return true;
   }
 }
 
-const validarEmailRegistrar = () =>{
+const validarEmailRegistrar = () => {
   let emailAValidar = document.getElementById('regEmail').value;
-  if(emailAValidar==0||emailAValidar==''){
+  if (emailAValidar == 0 || emailAValidar == '') {
     correoAlertaRegistro.classList.remove('d-none');
     correoAlertaRegistro.innerText = 'Por favor ingresa un email';
     document.getElementById("regEmail").style.border = '2px solid #951018';
     return false;
-  }else if(!expresionCorreo.test(emailAValidar)){
+  } else if (!expresionCorreo.test(emailAValidar)) {
     correoAlertaRegistro.classList.remove('d-none');
     correoAlertaRegistro.innerText = `La direccion de correo: "${emailAValidar}" no es un correo.`;
     document.getElementById("regEmail").style.border = '2px solid #951018';
     return false;
-  }else{
+  } else {
     correoAlertaRegistro.classList.add('d-none');
     document.getElementById("regEmail").style.border = 'none';
     return true;
   }
 }
 
-const validarPasswordRegistrar = () =>{
+const validarPasswordRegistrar = () => {
   let passwordAValidar = document.getElementById('regPass').value;
-  if(passwordAValidar==0 || passwordAValidar==''){
+  if (passwordAValidar == 0 || passwordAValidar == '') {
     passwordAlertaRegistro.classList.remove('d-none');
     passwordAlertaRegistro.innerText = 'Por favor ingrese una contraseña';
     document.getElementById('regPass').style.border = '2px solid #951018';
     return false;
-  }else if(!expresionPassword.test(passwordAValidar)){
+  } else if (!expresionPassword.test(passwordAValidar)) {
     passwordAlertaRegistro.classList.remove('d-none');
     passwordAlertaRegistro.innerText = 'La contraseña debe tener 8 carácteres mínimo entre numeros y letras';
     document.getElementById('regPass').style.border = '2px solid #951018';
     return false;
-  }else{
+  } else {
     passwordAlertaRegistro.classList.add('d-none');
     document.getElementById('regPass').style.border = 'none';
     return true;
   }
 }
 
- 
-const toast = document.querySelector(".toastXT"),
-     closeIcon = document.querySelector(".close"),
-     progress = document.querySelector(".progressTX");
-     mostrar = document.querySelector(".container-alerts");
-     formulario =document.getElementById("form")
-     volver = document.querySelector('.volver');
-     textAlert= document.querySelector('.text-2');
 
-     volver.addEventListener('click', (e)=>{
-      e.preventDefault();
-      window.location.href = "nosotros.html"
-     })
-btnInicio.addEventListener('click', function(e){
+const toast = document.querySelector(".toastXT");
+const closeIcon = document.querySelector(".close");
+const progress = document.querySelector(".progressTX");
+const mostrar = document.querySelector(".container-alerts");
+const formulario = document.getElementById("form")
+const volver = document.querySelector('.volver');
+const textAlert = document.querySelector('.text-2');
+
+volver.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.href = "nosotros.html"
+});
+
+btnInicio.addEventListener('click', function (e) {
   e.preventDefault();
   let emailValido = validarEmailIniciarSesion();
   let passwordValido = validarPasswordIniciarSesion();
-  if(emailValido && passwordValido){
+  if (emailValido && passwordValido) {
     
-    
-
-    toast.classList.add("active");
-                progress.classList.add("active");
-                mostrar.classList.add("mostrar");
-                textAlert.innerText = 'Has ingresado con exito'
-                
-
-
-            setTimeout(() => {
-                toast.classList.remove("active");
-                mostrar.classList.remove("mostrar");
-                almacenarUsuarioInicio(usuarioInicio);
-                
-            window.location.href = "productos.html"
-            }, 2500);// 1s= 1000 milisegundos
-
-            setTimeout(() => {
-                progress.classList.remove("active");
-                mostrar.classList.remove("mostrar");
-            },2500);
-
+    let email = document.getElementById('iniEmail').value;
+    let password = document.getElementById('iniPass').value;
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      toast.classList.add("active");
+      progress.classList.add("active");
+      mostrar.classList.add("mostrar");
+      textAlert.innerText = 'Has ingresado con exito';
+      setTimeout(() => {
+        toast.classList.remove("active");
+        mostrar.classList.remove("mostrar");
+        almacenarUsuarioInicio(usuarioInicio);
+  
+        window.location.href = "productos.html"
+        localStorage.setItem('logueado', '1');
+      }, 2500);
+      setTimeout(() => {
+        progress.classList.remove("active");
+        mostrar.classList.remove("mostrar");
+      }, 2500);
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage);
+    });
   }
+});
 
-  /*alerts*/
 
-  
-  
-})
 
-btnRegistro.addEventListener('click', function(e){
+btnRegistro.addEventListener('click', function (e) {
   e.preventDefault();
   let nombreValido = validarNombre();
   let emailValido = validarEmailRegistrar();
   let passwordValido = validarPasswordRegistrar();
-  if(nombreValido && emailValido && passwordValido){
-    almacenarUsuarioRegistro(usuarioRegistro);
-/*alerts* */
+  if (nombreValido && emailValido && passwordValido) {
+    let email = document.getElementById('regEmail').value;
+    let password = document.getElementById('regPass').value;
+    createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
+      const user = userCredential.user;
+      loginBtn.click();
+      /*alerts* */
 
-    toast.classList.add("active");
-    progress.classList.add("active");
-    mostrar.classList.add("mostrar");
+      toast.classList.add("active");
+      progress.classList.add("active");
+      mostrar.classList.add("mostrar");
 
-    setTimeout(() => {
-       toast.classList.remove("active");
+      setTimeout(() => {
+        toast.classList.remove("active");
         mostrar.classList.remove("mostrar");
-    }, 2500);
+      }, 2500);
 
-     setTimeout(() => {
+      setTimeout(() => {
         progress.classList.remove("active");
         mostrar.classList.remove("mostrar");
-     },2500);
-  }
-  formulario.reset();
+      }, 2500);
+      formulario.reset();
+    }).catch((error) => {
+      alert(error.message);
+    });
 
-  
-  
+  }
 });
 
 
