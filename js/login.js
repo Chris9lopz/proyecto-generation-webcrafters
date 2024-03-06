@@ -14,9 +14,6 @@ const auth = getAuth();
 await auth.authStateReady()
 const currentUser = auth.currentUser;
 
-if(currentUser){
-  window.location.href = "productos.html"
-}
 // Crear clase persona
 class Usuario {
   constructor(nombre, email, password) {
@@ -144,6 +141,7 @@ function almacenarUsuarioInicio(instancia) {
   // Almacenar contenido usuario en local storage
   localStorage.setItem('email', instancia.getEmail());
   localStorage.setItem('password', instancia.getPassword());
+  localStorage.setItem('logueado', '0');
 }
 //);
 //}
@@ -275,12 +273,14 @@ const textAlert = document.querySelector('.text-2');
 volver.addEventListener('click', (e) => {
   e.preventDefault();
   window.location.href = "nosotros.html"
-})
+});
+
 btnInicio.addEventListener('click', function (e) {
   e.preventDefault();
   let emailValido = validarEmailIniciarSesion();
   let passwordValido = validarPasswordIniciarSesion();
   if (emailValido && passwordValido) {
+    
     let email = document.getElementById('iniEmail').value;
     let password = document.getElementById('iniPass').value;
     signInWithEmailAndPassword(auth, email, password)
@@ -296,6 +296,7 @@ btnInicio.addEventListener('click', function (e) {
         almacenarUsuarioInicio(usuarioInicio);
   
         window.location.href = "productos.html"
+        localStorage.setItem('logueado', '1');
       }, 2500);
       setTimeout(() => {
         progress.classList.remove("active");
@@ -342,7 +343,6 @@ btnRegistro.addEventListener('click', function (e) {
     }).catch((error) => {
       alert(error.message);
     });
-
 
   }
 });
