@@ -71,9 +71,9 @@
         <!-- Right elements -->
         <div class="d-flex align-items-center">
           <!-- Icon -->
-          <a class="text-reset me-3" href="#">
+          <a class="text-reset me-3 verCarrito" id="verCarrito" href="#">
             <i class="fas fa-shopping-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-              aria-controls="offcanvasRight"></i>
+              aria-controls="offcanvasRight"></i><span id="cantidadCarrito" class="cantidad-carrito"></span>
           </a>
 
           <!-- Avatar -->
@@ -99,12 +99,15 @@
     <!--Offcanva-->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header bg-col text-dark d-flex justify-content-between">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Mi carrito</h5>
-        <span>Items</span>
+        <h5 class="offcanvas-title" id="offcanvasRightLabel" style="text-align: center;margin:0 auto;">Mi carrito</h5>
+        
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">
-
+      <div class="offcanvas-body" id="ContenedoragregarPlantilla">
+      </div>
+      
+      <div class="button" style="content:'x'">
+        <button style="content:'x'; margin:10px 20px;font-size:18px;width: 90%;border-radius:10px;border: rgb(156, 210, 211); background-color: rgba(156, 210, 211); padding:5px 0;color:white">Pagar</button>
       </div>
     </div>
 
@@ -132,14 +135,16 @@
 
   <!---Productos-->
   <div class="contenedor-filtroDeproductos">
+    
     <div class="lst-filtroProductos">
       <h2>Filtros</h2>
+      
 
       <div id="myDropdownMenu" class="myDropdownMenu">
         <div class=" dropdown-toggle-menu" type="button" id="dropdownMenuButton1"> Todas las plantillas </div>
 
         <ul class="lst-filtro  dropdown-menu menus" id="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li class="filter-item dropdown-item-menu  active" data-filter="all">Todas las plantillas</li>
+          <li class="filter-item  dropdown-item-menu  active" data-filter="all">Todas las plantillas</li>
           <li class="filter-item  dropdown-item.menu" data-filter="ropa">Ropa y moda</li>
           <li class="filter-item  dropdown-item-menu" data-filter="bebidasComidas">Bebidas y comida</li>
           <li class="filter-item  dropdown-item-menu" data-filter="mascotas">Cuidados de mascota</li>
@@ -149,117 +154,15 @@
           <li class="filter-item  dropdown-item-menu" data-filter="juego">Juegos y entretenimiento</li>
         </ul>
       </div>
-
-    <!--Plantillas de producto-->  
     </div>
-    <div class="galeria-filtroProductos">
-      <h2 class="plantilla">Plantillas</h2>
-      <div class="row-galeria ">
-        <div class="productos card  ropa">
-          <img src="img/productos/plantillaRopa.png" class="card-img-top  carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>T SHOP</h5>
-            <p class="card-text categoria">Ropa y moda</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-1"><i class="fas fa-shopping-cart"></i></a>
-          </div>
+    <!--Plantillas de producto-->  
+    <div class="galeria-filtroProductos" id="galeria-filtroProductos">
+        <h2 class="plantilla">Plantillas</h2>
+        <div class="row-galeria " id="row-galeria">
         </div>
-        <div class="productos card  bebidasComidas">
-          <img src="img/productos/plantilla comida.jpeg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>FoodHut</h5>
-            <p class="card-text categoria">Bebidas y comida</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-2"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  mascotas">
-          <img src="img/productos/plantillaMascotas.jpeg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Petology</h5>
-            <p class="card-text categoria">Cuidados de mascota</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-3"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  belleza">
-          <img src="img/productos/plantillaBelleza.jpeg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Spa Center</h5>
-            <p class="card-text categoria">Belleza y cometicos</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-4"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  zapatos">
-          <img src="img/productos/plantillaZapatos.jpeg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Zay</h5>
-            <p class="card-text categoria">Zapatos y deportivos</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-5"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  tecnologia">
-          <img src="img/productos/plantillaTech.png" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Movilidad</h5>
-            <p class="card-text categoria">Tecnología</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-6"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  juego">
-          <img src="img/productos/plantillaJuego.png" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Gil Ríos</h5>
-            <p class="card-text categoria">Juegos y entretenimiento</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-7"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  tecnologia">
-          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Food Fries</h5>
-            <p class="card-text categoria">Tecnología</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-8"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  zapatos">
-          <img src="img/productos/plantillaZapatos.png" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Calzado Deportivo</h5>
-            <p class="card-text categoria">Zapatos y deportivos</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-9"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
-  <!---Fin productos-->
-
-
+<!--fin Plantillas de producto-->  
   <!--Planes-->
   <section class="bg-light">
     <div class="container-lg">
@@ -437,7 +340,12 @@
 
   <!-- MDB -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+  <script src="js/productoJson.js"></script>
   <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+
+  
+
   
 </body>
 
