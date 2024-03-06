@@ -46,21 +46,25 @@
 .lst-filtro .filter-item.active{
     text-decoration: underline #3b71ca;
     color: #3b71ca;
+    cursor: pointer;
 }
 .lst-filtroProductos h2{
     margin-top: 10px;
 }
 .lst-filtro{
     padding-left: 20px;
+    cursor: pointer;
 }
 .lst-filtro li{
     list-style: none;
     padding: 5px 0;
+    cursor: pointer;
 }
 
 .lst-filtro li:hover{
     Color: #3b71ca;
     text-decoration:underline;
+    
 }
 .galeria-filtroProductos{
     width: 80%;
