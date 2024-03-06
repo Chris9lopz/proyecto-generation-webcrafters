@@ -71,9 +71,9 @@
         <!-- Right elements -->
         <div class="d-flex align-items-center">
           <!-- Icon -->
-          <a class="text-reset me-3" href="#">
+          <a class="text-reset me-3 verCarrito" id="verCarrito" href="#">
             <i class="fas fa-shopping-cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-              aria-controls="offcanvasRight"></i>
+              aria-controls="offcanvasRight"></i><span id="cantidadCarrito" class="cantidad-carrito"></span>
           </a>
 
           <!-- Avatar -->
@@ -99,12 +99,15 @@
     <!--Offcanva-->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header bg-col text-dark d-flex justify-content-between">
-        <h5 class="offcanvas-title" id="offcanvasRightLabel">Mi carrito</h5>
-        <span>Items</span>
+        <h5 class="offcanvas-title" id="offcanvasRightLabel" style="text-align: center;margin:0 auto;">Mi carrito</h5>
+        
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body">
-
+      <div class="offcanvas-body" id="ContenedoragregarPlantilla">
+      </div>
+      
+      <div class="button" style="content:'x'">
+        <button style="content:'x'; margin:10px 20px;font-size:18px;width: 90%;border-radius:10px;border: rgb(156, 210, 211); background-color: rgba(156, 210, 211); padding:5px 0;color:white">Pagar</button>
       </div>
     </div>
 
@@ -132,14 +135,16 @@
 
   <!---Productos-->
   <div class="contenedor-filtroDeproductos">
+    
     <div class="lst-filtroProductos">
       <h2>Filtros</h2>
+      
 
       <div id="myDropdownMenu" class="myDropdownMenu">
         <div class=" dropdown-toggle-menu" type="button" id="dropdownMenuButton1"> Todas las plantillas </div>
 
         <ul class="lst-filtro  dropdown-menu menus" id="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li class="filter-item dropdown-item-menu  active" data-filter="all">Todas las plantillas</li>
+          <li class="filter-item  dropdown-item-menu  active" data-filter="all">Todas las plantillas</li>
           <li class="filter-item  dropdown-item.menu" data-filter="ropa">Ropa y moda</li>
           <li class="filter-item  dropdown-item-menu" data-filter="bebidasComidas">Bebidas y comida</li>
           <li class="filter-item  dropdown-item-menu" data-filter="mascotas">Cuidados de mascota</li>
@@ -149,117 +154,15 @@
           <li class="filter-item  dropdown-item-menu" data-filter="juego">Juegos y entretenimiento</li>
         </ul>
       </div>
-
-    <!--Plantillas de producto-->  
     </div>
-    <div class="galeria-filtroProductos">
-      <h2 class="plantilla">Plantillas</h2>
-      <div class="row-galeria ">
-        <div class="productos card  ropa">
-          <img src="img/productos/plantilla.jpg" class="card-img-top  carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Food Fries</h5>
-            <p class="card-text categoria">Ropa y moda</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-1"><i class="fas fa-shopping-cart"></i></a>
-          </div>
+    <!--Plantillas de producto-->  
+    <div class="galeria-filtroProductos" id="galeria-filtroProductos">
+        <h2 class="plantilla">Plantillas</h2>
+        <div class="row-galeria " id="row-galeria">
         </div>
-        <div class="productos card  bebidasComidas">
-          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Food Fries</h5>
-            <p class="card-text categoria">Bebidas y comida</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-2"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  mascotas">
-          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Food Fries</h5>
-            <p class="card-text categoria">Cuidados de mascota</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-3"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  belleza">
-          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Food Fries</h5>
-            <p class="card-text categoria">Belleza y cometicos</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-4"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  zapatos">
-          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Food Fries</h5>
-            <p class="card-text categoria">Zapatos y deportivos</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-5"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  tecnologia">
-          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Food Fries</h5>
-            <p class="card-text categoria">Tecnología</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-6"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  juego">
-          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Food Fries</h5>
-            <p class="card-text categoria">Juegos y entretenimiento</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-7"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  tecnologia">
-          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Food Fries</h5>
-            <p class="card-text categoria">Tecnología</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-8"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-        <div class="productos card  zapatos">
-          <img src="img/productos/plantilla.jpg" class="card-img-top carrito-img-top" alt="...">
-          <div class="card-body">
-            <h5>Food Fries</h5>
-            <p class="card-text categoria">Zapatos y deportivos</p>
-            <p class="card-text precio">$100</p>
-          </div>
-          <div class="card-body carrito">
-            <a id="prod-9"><i class="fas fa-shopping-cart"></i></a>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
-  <!---Fin productos-->
-
-
+<!--fin Plantillas de producto-->  
   <!--Planes-->
   <section class="bg-light">
     <div class="container-lg">
@@ -274,9 +177,7 @@
               <h4 class="card-title">Started Pack</h4>
               <p class="lead card-subtitle">Básico</p>
               <p class="display-5 my-4 text-primary fw-bold">$100</p>
-              <p class="card-text mx-4 text-muted d-none d-md-block text-justify">Lorem ipsum, dolor sit amet
-                consectetur adipisicing elit. Sint vero, exercitationem quidem numquam, labore quaerat corporis ratione
-                possimus dicta dolore optio dolorum magni est obcaecati hic aspernatur commodi delectus fugit?</p>
+              <p class="card-text mx-4 text-muted d-none d-md-block text-justify">El paquete Started Pro ofrece una página web responsive y optimizada para SEO, mejorando la visibilidad online de tu negocio, con el podrás atraer clientes y destacar en la era digital.</p>
               <a href="#" class="btn btn-outline-primary btn-lg mt-3">Comprar</a>
             </div>
           </div>
@@ -288,9 +189,7 @@
               <h4 class="card-title">Progress Pro</h4>
               <p class="lead card-subtitle">Intermedio</p>
               <p class="display-4 my-4 text-primary fw-bold">$150</p>
-              <p class="card-text mx-4 text-muted d-none d-md-block">Lorem ipsum, dolor sit amet consectetur adipisicing
-                elit. Sint vero, exercitationem quidem numquam, labore quaerat corporis ratione possimus dicta dolore
-                optio dolorum magni est obcaecati hic aspernatur commodi delectus fugit?</p>
+              <p class="card-text mx-4 text-muted d-none d-md-block">Con Progress Pro, obtienes una página web responsive y SEO, junto con asistencia telefónica, chat y correo. Potencia tu presencia online y establece una identidad sólida con servicios de branding.</p>
               <a href="#" class="btn btn-outline-primary btn-lg mt-3">Comprar</a>
             </div>
           </div>
@@ -301,9 +200,7 @@
               <h4 class="card-title">Ultimate Uplift</h4>
               <p class="lead card-subtitle">Avanzado</p>
               <p class="display-5 my-4 text-primary fw-bold">$250</p>
-              <p class="card-text mx-4 text-muted d-none d-md-block">Lorem ipsum, dolor sit amet consectetur adipisicing
-                elit. Sint vero, exercitationem quidem numquam, labore quaerat corporis ratione possimus dicta dolore
-                optio dolorum magni est obcaecati hic aspernatur commodi delectus fugit?</p>
+              <p class="card-text mx-4 text-muted d-none d-md-block">El Ultimate Uplift combina la excelencia de los paquetes anteriores con animaciones exclusivas, garantizando una experiencia web cautivadora. Además, disfruta de servicios de hosting en la nube AWS para un rendimiento óptimo</p>
               <a href="#" class="btn btn-outline-primary btn-lg mt-3">Comprar</a>
             </div>
           </div>
@@ -370,7 +267,7 @@
       </div>
     </div>
   </section>
-
+  <!--Fin tabla comparativa de planes-->
   <!-- posicionamiento SEO -->
   <div class="seo text-center d-flex justify-content-center align-items-center">
     <div class="row align-items-center">
@@ -443,7 +340,13 @@
 
   <!-- MDB -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+  <script src="js/productoJson.js"></script>
   <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+
+  
+
+  
 </body>
 
 </html>

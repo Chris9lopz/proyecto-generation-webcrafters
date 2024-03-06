@@ -44,8 +44,8 @@
     margin-top: 6%;
 }
 .lst-filtro .filter-item.active{
-    text-decoration: underline blue;
-    color: blue;
+    text-decoration: underline #3b71ca;
+    color: #3b71ca;
 }
 .lst-filtroProductos h2{
     margin-top: 10px;
@@ -59,7 +59,7 @@
 }
 
 .lst-filtro li:hover{
-    Color: blue;
+    Color: #3b71ca;
     text-decoration:underline;
 }
 .galeria-filtroProductos{
@@ -127,7 +127,105 @@ div.btn{
     }
 }
 
+/*agregar carrito*/
 
+select.opciones{
+    appearance: none;
+    padding: 1px 0px;
+    border-radius: 150px;
+    border: 1px solid rgba(156, 210, 211);
+    background-color: rgba(156, 210, 211);
+    color: #ffffff;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.btn-Eliminar{
+    width: 25px;
+     margin:0 auto; 
+     margin-top:50px;
+}.agregarPlantilla{
+    display: flex; 
+    padding:20px; 
+    border-bottom:1px solid rgba(156, 210, 211)
+}
+.agregarPlantillaImg{
+    width: 40%; 
+    padding:10px;
+}
+.agregarPlantillaTxt{
+    margin:0 auto;
+}
+.plantillaTxt1{
+    margin:5px 0
+}
+.plantillaTxt2{
+    margin:5px 0
+}
+
+.total{
+    display: flex; 
+    margin:0 20px; 
+    margin-top: 10px;
+}
+.totalTxt{
+    font-size: 18px;
+    font-weight:800; 
+}
+.numTxt{
+    font-size: 16px;
+     margin:0 auto;
+     position:relative; 
+     left:30%
+}
+.btn-Eliminar{
+    cursor: pointer;
+}
+
+.cantidad-carrito{
+    background-color: #3b71ca;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 1px 5px;
+    top: 20px;
+    right: 40px;
+    position: absolute;
+    display: none;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.comprar {
+    padding: 4px 0;
+    border-radius: 5px;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+    border: 1px solid #3b71ca;
+    color: #3b71ca;
+    background-color: transparent;
+    
+    font-size: 15px;
+    
+
+}
+.carrito{
+    
+    padding: 0;
+    border-radius: 20px;
+    text-align: center;
+    margin: 2px 37px;
+
+}
+.carrito p{
+    
+    margin: 0;
+    margin-right: 15px;
+
+}
 /*estilos posicionamiento seo*/
 
 .seo{
@@ -317,8 +415,6 @@ div.btn{
         width: auto;
     }
 
-    
-    
     .menus{
         visibility: hidden;
         position: absolute;

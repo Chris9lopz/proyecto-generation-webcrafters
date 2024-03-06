@@ -189,3 +189,18 @@ textarea.entrada {
         min-width: 700px;
     }
 }
+
+@media (max-width:860px) {
+
+    .elemento {
+        position: static !important;
+        margin: 0 auto;
+        max-width: none;
+        min-width: none;
+    }
+
+    .contacto-info{
+        text-align: center;
+    }
+
+}
